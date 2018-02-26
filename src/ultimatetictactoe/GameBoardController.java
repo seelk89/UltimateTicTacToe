@@ -198,7 +198,9 @@ public class GameBoardController implements Initializable
     private Button btn22_12;
     @FXML
     private Button btn22_22;
-
+    
+    private MainWindowController parent;
+    
     /**
      * Initializes the controller class.
      */
@@ -207,5 +209,9 @@ public class GameBoardController implements Initializable
     {
         // TODO
     }    
-    
+
+    public void setParentWindowController(MainWindowController parent)
+    {
+        this.parent = parent;
+    }
 }
