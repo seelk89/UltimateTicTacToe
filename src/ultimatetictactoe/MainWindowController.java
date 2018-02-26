@@ -5,6 +5,8 @@
  */
 package ultimatetictactoe;
 
+import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXTextField;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -19,10 +21,22 @@ import javafx.scene.control.Label;
 public class MainWindowController implements Initializable
 {
     
-    @FXML
     private Label label;
-    
     @FXML
+    private JFXButton btnHumanVsHuman;
+    @FXML
+    private JFXButton btnHumanvsBot;
+    @FXML
+    private JFXButton btnBotVsBot;
+    @FXML
+    private Label lblPlayer1;
+    @FXML
+    private Label lblPlayer2;
+    @FXML
+    private JFXTextField txtPlayer1;
+    @FXML
+    private JFXTextField txtPlayer2;
+    
     private void handleButtonAction(ActionEvent event)
     {
         System.out.println("You clicked me!");
@@ -34,5 +48,17 @@ public class MainWindowController implements Initializable
     {
         // TODO
     }    
+
+    @FXML
+    private void clickHumanVsHuman(ActionEvent event) {
+    }
+
+    @FXML
+    private void clickHumanVsBot(ActionEvent event) {
+    }
+
+    @FXML
+    private void clickBotVsBot(ActionEvent event) {
+    }
     
 }
