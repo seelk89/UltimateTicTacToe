@@ -37,16 +37,11 @@ public class MainWindowController implements Initializable
     @FXML
     private JFXTextField txtPlayer2;
     
-    private void handleButtonAction(ActionEvent event)
-    {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!");
-    }
     
     @Override
     public void initialize(URL url, ResourceBundle rb)
     {
-        // TODO
+        
     }    
 
     @FXML
