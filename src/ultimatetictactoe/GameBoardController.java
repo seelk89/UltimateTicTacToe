@@ -7,9 +7,11 @@ package ultimatetictactoe;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 
 /**
@@ -198,6 +200,11 @@ public class GameBoardController implements Initializable
     private Button btn22_12;
     @FXML
     private Button btn22_22;
+
+    @FXML
+    private Label txtPlayer;
+    @FXML
+    private Label txtTurnCount;
     
     private MainWindowController parent;
     
@@ -213,5 +220,10 @@ public class GameBoardController implements Initializable
     public void setParentWindowController(MainWindowController parent)
     {
         this.parent = parent;
+    }
+
+    @FXML
+    private void btnAction(ActionEvent event)
+    {
     }
 }
