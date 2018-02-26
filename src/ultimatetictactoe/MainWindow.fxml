@@ -6,12 +6,12 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="200" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/9.0.1" fx:controller="ultimatetictactoe.MainWindowController">
+<AnchorPane id="AnchorPane" prefHeight="200" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ultimatetictactoe.MainWindowController">
    <children>
       <Label fx:id="lblPlayer1" layoutX="99.0" layoutY="21.0" text="Player 1" textFill="RED" />
       <Label fx:id="lblPlayer2" layoutX="236.0" layoutY="21.0" text="Player 2" textFill="#2a00ff" />
-      <JFXTextField fx:id="txtPlayer1" focusColor="RED" layoutX="42.0" layoutY="57.0" prefHeight="27.0" prefWidth="120.0" AnchorPane.leftAnchor="60.0" />
-      <JFXTextField fx:id="txtPlayer2" focusColor="#2a00ff" layoutX="189.0" layoutY="58.0" prefHeight="25.0" prefWidth="120.0" AnchorPane.rightAnchor="60.0" />
+      <JFXTextField fx:id="txtPlayer1" focusColor="RED" layoutX="60.0" layoutY="58.0" prefHeight="27.0" prefWidth="120.0" AnchorPane.leftAnchor="60.0" />
+      <JFXTextField fx:id="txtPlayer2" focusColor="#2a00ff" layoutX="197.0" layoutY="59.0" prefHeight="25.0" prefWidth="120.0" />
       <ButtonBar layoutY="140.0" prefHeight="40.0" prefWidth="377.0">
          <buttons>
             <JFXButton fx:id="btnHumanVsHuman" onAction="#clickHumanVsHuman" prefHeight="26.0" prefWidth="127.0" text="Human vs Human" />
