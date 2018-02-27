@@ -174,7 +174,7 @@
                   <Button fx:id="btn02_00" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" />
                   <Button fx:id="btn02_01" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" />
                   <Button fx:id="btn02_20" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" />
-                  <Button fx:id="btn02_01" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="1" />
+                  <Button fx:id="btn02_10" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="1" />
                   <Button fx:id="btn02_11" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                   <Button fx:id="btn02_21" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                   <Button fx:id="btn02_02" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="2" />
@@ -197,7 +197,7 @@
                   <Button fx:id="btn12_00" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" />
                   <Button fx:id="btn12_10" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" />
                   <Button fx:id="btn12_20" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" />
-                  <Button fx:id="btn01_12" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="1" />
+                  <Button fx:id="btn12_01" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="1" />
                   <Button fx:id="btn12_11" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                   <Button fx:id="btn12_21" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                   <Button fx:id="btn12_02" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="2" />
