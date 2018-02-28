@@ -475,4 +475,22 @@ public class GameBoardController implements Initializable
 
     }
 
+     private void checkThreeInARow(Button a, Button b, Button c, String XO) {
+        if (a.getText().equals(XO) && b.getText().equals(XO) && c.getText().equals(XO)){
+            System.out.println(XO + " Wins"); 
+        }
+    }
+//                    Will be inserted in a button method, not sure if 10 methods or just 1     
+//                    Button btn = (Button) event.getSource();
+//                    String xOrO = player == "X" ? "X" : "O";
+//                    btn.setText(xOrO);
+//                    checkThreeInARow(btn1, btn2, btn3, xOrO); 
+//                    checkThreeInARow(btn1, btn4, btn7, xOrO);
+//                    checkThreeInARow(btn2, btn5, btn8, xOrO);
+//                    checkThreeInARow(btn4, btn5, btn6, xOrO);
+//                    checkThreeInARow(btn7, btn8, btn9, xOrO);
+//                    checkThreeInARow(btn3, btn6, btn9, xOrO);
+//                    checkThreeInARow(btn1, btn5, btn9, xOrO);
+//                    checkThreeInARow(btn3, btn5, btn7, xOrO);
+     
 }
