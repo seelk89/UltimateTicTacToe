@@ -5,6 +5,7 @@
  */
 package ultimatetictactoe;
 
+import field.IField;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -30,6 +31,7 @@ public class GameBoardController implements Initializable
 {
 
     @FXML
+
     private GridPane macroBoard;
 
     private MainWindowController parent;
@@ -225,6 +227,8 @@ public class GameBoardController implements Initializable
     @FXML
     private Button btn9i;
 
+    private String[][] board = new String[9][9];
+
     private boolean everywhere = true;
     private boolean idA = false;
     private boolean idB = false;
@@ -236,6 +240,9 @@ public class GameBoardController implements Initializable
     private boolean idH = false;
     private boolean idI = false;
 
+    /**
+     * Initializes the controller class.
+     */
     @Override
     public void initialize(URL url, ResourceBundle rb)
     {
@@ -248,6 +255,8 @@ public class GameBoardController implements Initializable
                 btn1g, btn2g, btn3g, btn4g, btn5g, btn6g, btn7g, btn8g, btn9g,
                 btn1h, btn2h, btn3h, btn4h, btn5h, btn6h, btn7h, btn8h, btn9h,
                 btn1i, btn2i, btn3i, btn4i, btn5i, btn6i, btn7i, btn8i, btn9i));
+
+        fillBoard();
 
     }
 
@@ -271,6 +280,7 @@ public class GameBoardController implements Initializable
         System.out.println(r);
         System.out.println(c);
         System.out.println(btn);
+        System.out.println(board[r][c]);
 
         choosingBetweenMacroOrMicro();
     }
@@ -440,6 +450,18 @@ public class GameBoardController implements Initializable
             idG = false;
             idH = false;
             idI = true;
+        }
+
+    }
+
+    private void fillBoard()
+    {
+        for (int i = 0; i < board.length; i++)
+        {
+            for (int j = 0; j < board.length; j++)
+            {
+                board[i][j] = IField.EMPTY_FIELD;
+            }
         }
     }
 

@@ -1,24 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
+<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane id="AnchorPane" prefHeight="540.0" prefWidth="554.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ultimatetictactoe.GameBoardController">
+<AnchorPane id="AnchorPane" prefHeight="540.0" prefWidth="558.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ultimatetictactoe.GameBoardController">
    <children>
-      <GridPane fx:id="macroBoard" layoutX="14.0" layoutY="14.0" prefHeight="485.0" prefWidth="527.0">
+      <Label fx:id="txtPlayer" layoutX="14.0" layoutY="508.0" text="Player" />
+      <Label fx:id="txtTurnCount" layoutX="487.0" layoutY="508.0" text="turnCount" />
+      <GridPane gridLinesVisible="true" layoutX="14.0" layoutY="14.0" prefHeight="469.0" prefWidth="529.0">
         <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
         <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
             <GridPane fx:id="microBoardA" gridLinesVisible="true">
@@ -33,15 +35,15 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button fx:id="btn6a" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <Button fx:id="btn2a" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" />
-                  <Button fx:id="btn3a" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" />
-                  <Button fx:id="btn9a" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                  <Button fx:id="btn5a" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <Button fx:id="btn8a" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <Button fx:id="btn7a" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="2" />
-                  <Button fx:id="btn4a" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="1" />
-                  <Button fx:id="btn1a" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" />
+                  <JFXButton fx:id="btn6a" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <JFXButton fx:id="btn2a" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" />
+                  <JFXButton fx:id="btn3a" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" />
+                  <JFXButton fx:id="btn9a" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <JFXButton fx:id="btn5a" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <JFXButton fx:id="btn8a" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <JFXButton fx:id="btn7a" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="2" />
+                  <JFXButton fx:id="btn4a" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="1" />
+                  <JFXButton fx:id="btn1a" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" />
                </children>
             </GridPane>
             <GridPane fx:id="microBoardB" gridLinesVisible="true" GridPane.columnIndex="1">
@@ -56,15 +58,15 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button fx:id="btn1b" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" />
-                  <Button fx:id="btn2b" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" />
-                  <Button fx:id="btn3b" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" />
-                  <Button fx:id="btn6b" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <Button fx:id="btn5b" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <Button fx:id="btn4b" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="1" />
-                  <Button fx:id="btn9b" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                  <Button fx:id="btn8b" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <Button fx:id="btn7b" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="2" />
+                  <JFXButton fx:id="btn1b" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" />
+                  <JFXButton fx:id="btn2b" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" />
+                  <JFXButton fx:id="btn3b" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" />
+                  <JFXButton fx:id="btn6b" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <JFXButton fx:id="btn5b" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <JFXButton fx:id="btn4b" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="1" />
+                  <JFXButton fx:id="btn9b" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <JFXButton fx:id="btn8b" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <JFXButton fx:id="btn7b" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="2" />
                </children>
             </GridPane>
             <GridPane fx:id="microBoardC" gridLinesVisible="true" GridPane.columnIndex="2">
@@ -79,15 +81,15 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button fx:id="btn1c" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" />
-                  <Button fx:id="btn2c" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" />
-                  <Button fx:id="btn3c" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" />
-                  <Button fx:id="btn6c" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <Button fx:id="btn5c" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <Button fx:id="btn4c" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="1" />
-                  <Button fx:id="btn9c" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                  <Button fx:id="btn8c" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <Button fx:id="btn7c" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="2" />
+                  <JFXButton fx:id="btn1c" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" />
+                  <JFXButton fx:id="btn2c" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" />
+                  <JFXButton fx:id="btn3c" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" />
+                  <JFXButton fx:id="btn6c" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <JFXButton fx:id="btn5c" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <JFXButton fx:id="btn4c" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="1" />
+                  <JFXButton fx:id="btn9c" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <JFXButton fx:id="btn8c" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <JFXButton fx:id="btn7c" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="2" />
                </children>
             </GridPane>
             <GridPane fx:id="microBoardD" gridLinesVisible="true" GridPane.rowIndex="1">
@@ -102,15 +104,15 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button fx:id="btn3d" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" />
-                  <Button fx:id="btn6d" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <Button fx:id="btn9d" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                  <Button fx:id="btn2d" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" />
-                  <Button fx:id="btn5d" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <Button fx:id="btn8d" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <Button fx:id="btn1d" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" />
-                  <Button fx:id="btn4d" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="1" />
-                  <Button fx:id="btn7d" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="2" />
+                  <JFXButton fx:id="btn3d" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" />
+                  <JFXButton fx:id="btn6d" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <JFXButton fx:id="btn9d" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <JFXButton fx:id="btn2d" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" />
+                  <JFXButton fx:id="btn5d" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <JFXButton fx:id="btn8d" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <JFXButton fx:id="btn1d" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" />
+                  <JFXButton fx:id="btn4d" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="1" />
+                  <JFXButton fx:id="btn7d" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="2" />
                </children>
             </GridPane>
             <GridPane fx:id="microBoardE" gridLinesVisible="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
@@ -125,15 +127,15 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button fx:id="btn3e" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" />
-                  <Button fx:id="btn2e" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" />
-                  <Button fx:id="btn1e" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" />
-                  <Button fx:id="btn6e" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <Button fx:id="btn5e" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <Button fx:id="btn4e" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="1" />
-                  <Button fx:id="btn7e" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="2" />
-                  <Button fx:id="btn8e" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <Button fx:id="btn9e" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <JFXButton fx:id="btn3e" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" />
+                  <JFXButton fx:id="btn2e" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" />
+                  <JFXButton fx:id="btn1e" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" />
+                  <JFXButton fx:id="btn6e" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <JFXButton fx:id="btn5e" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <JFXButton fx:id="btn4e" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="1" />
+                  <JFXButton fx:id="btn7e" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="2" />
+                  <JFXButton fx:id="btn8e" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <JFXButton fx:id="btn9e" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
                </children>
             </GridPane>
             <GridPane fx:id="microBoardF" gridLinesVisible="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
@@ -148,15 +150,15 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button fx:id="btn3f" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" />
-                  <Button fx:id="btn2f" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" />
-                  <Button fx:id="btn1f" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" />
-                  <Button fx:id="btn6f" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <Button fx:id="btn5f" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <Button fx:id="btn4f" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="1" />
-                  <Button fx:id="btn9f" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                  <Button fx:id="btn8f" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <Button fx:id="btn7f" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="2" />
+                  <JFXButton fx:id="btn3f" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" />
+                  <JFXButton fx:id="btn2f" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" />
+                  <JFXButton fx:id="btn1f" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" />
+                  <JFXButton fx:id="btn6f" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <JFXButton fx:id="btn5f" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <JFXButton fx:id="btn4f" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="1" />
+                  <JFXButton fx:id="btn9f" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <JFXButton fx:id="btn8f" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <JFXButton fx:id="btn7f" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="2" />
                </children>
             </GridPane>
             <GridPane fx:id="microBoardG" gridLinesVisible="true" GridPane.rowIndex="2">
@@ -171,15 +173,15 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button fx:id="btn1g" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" />
-                  <Button fx:id="btn2g" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" />
-                  <Button fx:id="btn3g" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" />
-                  <Button fx:id="btn4g" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="1" />
-                  <Button fx:id="btn5g" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <Button fx:id="btn6g" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <Button fx:id="btn7g" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="2" />
-                  <Button fx:id="btn8g" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <Button fx:id="btn9g" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <JFXButton fx:id="btn1g" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" />
+                  <JFXButton fx:id="btn2g" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" />
+                  <JFXButton fx:id="btn3g" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" />
+                  <JFXButton fx:id="btn4g" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="1" />
+                  <JFXButton fx:id="btn5g" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <JFXButton fx:id="btn6g" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <JFXButton fx:id="btn7g" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="2" />
+                  <JFXButton fx:id="btn8g" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <JFXButton fx:id="btn9g" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
                </children>
             </GridPane>
             <GridPane fx:id="microBoardH" gridLinesVisible="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
@@ -194,15 +196,15 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button fx:id="btn1h" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" />
-                  <Button fx:id="btn2h" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" />
-                  <Button fx:id="btn3h" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" />
-                  <Button fx:id="btn4h" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="1" />
-                  <Button fx:id="btn5h" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <Button fx:id="btn6h" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <Button fx:id="btn7h" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="2" />
-                  <Button fx:id="btn8h" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <Button fx:id="btn9h" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <JFXButton fx:id="btn1h" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" />
+                  <JFXButton fx:id="btn2h" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" />
+                  <JFXButton fx:id="btn3h" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" />
+                  <JFXButton fx:id="btn4h" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="1" />
+                  <JFXButton fx:id="btn5h" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <JFXButton fx:id="btn6h" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <JFXButton fx:id="btn7h" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="2" />
+                  <JFXButton fx:id="btn8h" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <JFXButton fx:id="btn9h" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
                </children>
             </GridPane>
             <GridPane fx:id="microBoardi" gridLinesVisible="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
@@ -217,15 +219,15 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button fx:id="btn1i" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" />
-                  <Button fx:id="btn2i" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" />
-                  <Button fx:id="btn3i" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" />
-                  <Button fx:id="btn4i" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="1" />
-                  <Button fx:id="btn5i" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <Button fx:id="btn6i" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <Button fx:id="btn7i" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="2" />
-                  <Button fx:id="btn8i" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <Button fx:id="btn9i" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <JFXButton fx:id="btn1i" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" />
+                  <JFXButton fx:id="btn2i" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" />
+                  <JFXButton fx:id="btn3i" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" />
+                  <JFXButton fx:id="btn4i" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="1" />
+                  <JFXButton fx:id="btn5i" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <JFXButton fx:id="btn6i" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <JFXButton fx:id="btn7i" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="2" />
+                  <JFXButton fx:id="btn8i" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <JFXButton fx:id="btn9i" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
                </children>
             </GridPane>
          </children>
