@@ -5,6 +5,7 @@
  */
 package ultimatetictactoe;
 
+import field.IField;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -207,6 +208,8 @@ public class GameBoardController implements Initializable
     @Override
     public void initialize(URL url, ResourceBundle rb)
     {
+        fillBoard();
+        
         allTheButtons.addAll(Arrays.asList(btn00_00,btn00_01,btn00_02,btn00_10,btn00_11,btn00_12,btn00_20,btn00_21,btn00_22,
                     btn01_00,btn01_01,btn01_02,btn01_10,btn01_11,btn01_12,btn01_20,btn01_21,btn01_22,
                     btn02_00,btn02_01,btn02_02,btn02_10,btn02_11,btn02_12,btn02_20,btn02_21,btn02_22,
@@ -243,17 +246,26 @@ public class GameBoardController implements Initializable
             btn.setText("O");
             player = 0;
         } 
-        
+       
         System.out.println(r);
         System.out.println(c);
         System.out.println(btn);
+        System.out.println(board[r][c]);
     }
     
-    private String [][] board;
+    private String [][] board = new String [9][9];
     
-    //q,w,z dynamic, 2, 1 that checks big board and one that checks macroboard
-    //need to check for winning patterns, if 123, 456, 789, 147 etc is there, = win
-    // Win/block/strategy/random
+    private void fillBoard()
+    {
+        for (int i = 0; i < board.length; i++)
+        {
+            for (int j = 0; j < board.length; j++)
+            {
+                board[i][j] = IField.EMPTY_FIELD;  
+            }       
+        }
+    }
+    
     private void win()
     {
         if (btn00_00.contains(player, player)) 
@@ -262,7 +274,5 @@ public class GameBoardController implements Initializable
             //stop game
         }
         
-    }
-    
-      
+    }   
 }
