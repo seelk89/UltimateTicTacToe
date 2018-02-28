@@ -27,26 +27,6 @@ public class GameBoardController implements Initializable
 {
 
     @FXML
-    private GridPane macroBoard;
-    @FXML
-    private GridPane microBoard00;
-    @FXML
-    private GridPane microBoard10;
-    @FXML
-    private GridPane microBoard20;
-    @FXML
-    private GridPane microBoard01;
-    @FXML
-    private GridPane microBoard11;
-    @FXML
-    private GridPane microBoard21;
-    @FXML
-    private GridPane microBoard02;
-    @FXML
-    private GridPane microBoard12;
-    @FXML
-    private GridPane microBoard22;
-    @FXML
     private Button btn00_21;
     @FXML
     private Button btn00_10;
@@ -255,6 +235,9 @@ public class GameBoardController implements Initializable
         if(player == 0)
         {
             btn.setText("X");
+        } else
+        {
+            btn.setText("O");
         }
         
         System.out.println(r);

@@ -1,236 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
+<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane id="AnchorPane" prefHeight="540.0" prefWidth="554.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ultimatetictactoe.GameBoardController">
+<AnchorPane id="AnchorPane" prefHeight="540.0" prefWidth="558.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ultimatetictactoe.GameBoardController">
    <children>
-      <GridPane fx:id="macroBoard" layoutX="14.0" layoutY="14.0" prefHeight="485.0" prefWidth="527.0">
-        <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        </rowConstraints>
-         <children>
-            <GridPane fx:id="microBoard00" gridLinesVisible="true">
-              <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-              </columnConstraints>
-              <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-              </rowConstraints>
-               <children>
-                  <Button fx:id="btn00_21" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <Button fx:id="btn00_10" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" />
-                  <Button fx:id="btn00_20" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" />
-                  <Button fx:id="btn00_22" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                  <Button fx:id="btn00_11" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <Button fx:id="btn00_12" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <Button fx:id="btn00_02" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="2" />
-                  <Button fx:id="btn00_01" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="1" />
-                  <Button fx:id="btn00_00" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" />
-               </children>
-            </GridPane>
-            <GridPane fx:id="microBoard10" gridLinesVisible="true" GridPane.columnIndex="1">
-              <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-              </columnConstraints>
-              <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-              </rowConstraints>
-               <children>
-                  <Button fx:id="btn10_00" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" />
-                  <Button fx:id="btn10_10" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" />
-                  <Button fx:id="btn10_20" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" />
-                  <Button fx:id="btn10_21" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <Button fx:id="btn10_11" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <Button fx:id="btn10_01" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="1" />
-                  <Button fx:id="btn10_22" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                  <Button fx:id="btn10_12" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <Button fx:id="btn10_02" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="2" />
-               </children>
-            </GridPane>
-            <GridPane fx:id="microBoard20" gridLinesVisible="true" GridPane.columnIndex="2">
-              <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-              </columnConstraints>
-              <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-              </rowConstraints>
-               <children>
-                  <Button fx:id="btn20_00" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" />
-                  <Button fx:id="btn20_10" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" />
-                  <Button fx:id="btn20_20" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" />
-                  <Button fx:id="btn20_21" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <Button fx:id="btn20_11" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <Button fx:id="btn20_01" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="1" />
-                  <Button fx:id="btn20_22" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                  <Button fx:id="btn20_12" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <Button fx:id="btn20_02" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="2" />
-               </children>
-            </GridPane>
-            <GridPane fx:id="microBoard01" gridLinesVisible="true" GridPane.rowIndex="1">
-              <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-              </columnConstraints>
-              <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-              </rowConstraints>
-               <children>
-                  <Button fx:id="btn01_20" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" />
-                  <Button fx:id="btn01_21" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <Button fx:id="btn01_22" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                  <Button fx:id="btn01_10" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" />
-                  <Button fx:id="btn01_11" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <Button fx:id="btn01_12" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <Button fx:id="btn01_00" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" />
-                  <Button fx:id="btn01_01" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="1" />
-                  <Button fx:id="btn01_02" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="2" />
-               </children>
-            </GridPane>
-            <GridPane fx:id="microBoard11" gridLinesVisible="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
-              <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-              </columnConstraints>
-              <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-              </rowConstraints>
-               <children>
-                  <Button fx:id="btn11_20" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" />
-                  <Button fx:id="btn11_10" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" />
-                  <Button fx:id="btn11_00" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" />
-                  <Button fx:id="btn11_21" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <Button fx:id="btn11_11" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <Button fx:id="btn11_01" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="1" />
-                  <Button fx:id="btn11_02" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="2" />
-                  <Button fx:id="btn11_12" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <Button fx:id="btn11_22" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-               </children>
-            </GridPane>
-            <GridPane fx:id="microBoard21" gridLinesVisible="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
-              <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-              </columnConstraints>
-              <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-              </rowConstraints>
-               <children>
-                  <Button fx:id="btn21_20" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" />
-                  <Button fx:id="btn21_10" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" />
-                  <Button fx:id="btn21_00" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" />
-                  <Button fx:id="btn21_21" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <Button fx:id="btn21_11" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <Button fx:id="btn21_01" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="1" />
-                  <Button fx:id="btn21_22" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                  <Button fx:id="btn21_12" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <Button fx:id="btn21_02" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="2" />
-               </children>
-            </GridPane>
-            <GridPane fx:id="microBoard02" gridLinesVisible="true" GridPane.rowIndex="2">
-              <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-              </columnConstraints>
-              <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-              </rowConstraints>
-               <children>
-                  <Button fx:id="btn02_00" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" />
-                  <Button fx:id="btn02_01" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" />
-                  <Button fx:id="btn02_20" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" />
-                  <Button fx:id="btn02_10" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="1" />
-                  <Button fx:id="btn02_11" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <Button fx:id="btn02_21" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <Button fx:id="btn02_02" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="2" />
-                  <Button fx:id="btn02_12" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <Button fx:id="btn02_22" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-               </children>
-            </GridPane>
-            <GridPane fx:id="microBoard12" gridLinesVisible="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
-              <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-              </columnConstraints>
-              <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-              </rowConstraints>
-               <children>
-                  <Button fx:id="btn12_00" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" />
-                  <Button fx:id="btn12_10" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" />
-                  <Button fx:id="btn12_20" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" />
-                  <Button fx:id="btn12_01" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="1" />
-                  <Button fx:id="btn12_11" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <Button fx:id="btn12_21" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <Button fx:id="btn12_02" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="2" />
-                  <Button fx:id="btn12_12" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <Button fx:id="btn12_22" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-               </children>
-            </GridPane>
-            <GridPane fx:id="microBoard22" gridLinesVisible="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
-              <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-              </columnConstraints>
-              <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-              </rowConstraints>
-               <children>
-                  <Button fx:id="btn22_00" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" />
-                  <Button fx:id="btn22_10" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" />
-                  <Button fx:id="btn22_20" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" />
-                  <Button fx:id="btn22_01" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="1" />
-                  <Button fx:id="btn22_11" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <Button fx:id="btn22_21" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <Button fx:id="btn22_02" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="2" />
-                  <Button fx:id="btn22_12" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <Button fx:id="btn22_22" mnemonicParsing="false" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-               </children>
-            </GridPane>
-         </children>
-      </GridPane>
       <Label fx:id="txtPlayer" layoutX="14.0" layoutY="508.0" text="Player" />
       <Label fx:id="txtTurnCount" layoutX="487.0" layoutY="508.0" text="turnCount" />
+      <GridPane gridLinesVisible="true" layoutX="14.0" layoutY="14.0" prefHeight="469.0" prefWidth="529.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <JFXButton fx:id="btn00_01" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" />
+            <JFXButton fx:id="btn00_00" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" />
+            <JFXButton fx:id="btn00_02" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" />
+            <JFXButton fx:id="btn01_00" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="3" />
+            <JFXButton fx:id="btn01_01" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="4" />
+            <JFXButton fx:id="btn01_02" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="5" />
+            <JFXButton fx:id="btn02_00" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="6" />
+            <JFXButton fx:id="btn02_01" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="7" />
+            <JFXButton fx:id="btn02_02" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="8" />
+            <JFXButton prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="1" />
+            <JFXButton fx:id="btn00_10" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="1" />
+            <JFXButton fx:id="btn00_11" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <JFXButton fx:id="btn00_12" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <JFXButton fx:id="btn01_10" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <JFXButton fx:id="btn01_11" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <JFXButton fx:id="btn01_12" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <JFXButton fx:id="btn02_10" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+            <JFXButton fx:id="btn02_11" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+            <JFXButton fx:id="btn02_12" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="8" GridPane.rowIndex="1" />
+            <JFXButton fx:id="btn00_20" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="2" />
+            <JFXButton fx:id="btn00_21" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <JFXButton fx:id="btn00_22" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <JFXButton fx:id="btn01_20" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <JFXButton fx:id="btn01_21" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <JFXButton fx:id="btn01_22" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+            <JFXButton fx:id="btn02_20" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+            <JFXButton fx:id="btn02_21" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+            <JFXButton fx:id="btn02_22" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="8" GridPane.rowIndex="2" />
+            <JFXButton fx:id="btn10_00" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="3" />
+            <JFXButton fx:id="btn10_01" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <JFXButton fx:id="btn10_02" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <JFXButton fx:id="btn11_00" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <JFXButton fx:id="btn11_01" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <JFXButton fx:id="btn11_02" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+            <JFXButton fx:id="btn12_00" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+            <JFXButton fx:id="btn12_01" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+            <JFXButton fx:id="btn12_02" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="8" GridPane.rowIndex="3" />
+            <JFXButton fx:id="btn10_10" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="4" />
+            <JFXButton fx:id="btn10_11" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <JFXButton fx:id="btn10_12" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <JFXButton fx:id="btn11_10" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <JFXButton fx:id="btn11_11" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+            <JFXButton fx:id="btn11_12" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+            <JFXButton fx:id="btn12_10" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+            <JFXButton fx:id="btn10_20" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="5" />
+            <JFXButton fx:id="btn12_11" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="7" GridPane.rowIndex="4" />
+            <JFXButton fx:id="btn12_12" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="8" GridPane.rowIndex="4" />
+            <JFXButton fx:id="btn10_21" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <JFXButton fx:id="btn10_22" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <JFXButton fx:id="btn11_20" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+            <JFXButton fx:id="btn11_21" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+            <JFXButton fx:id="btn11_22" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+            <JFXButton fx:id="btn12_20" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+            <JFXButton fx:id="btn12_21" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="7" GridPane.rowIndex="5" />
+            <JFXButton fx:id="btn12_22" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="8" GridPane.rowIndex="5" />
+            <JFXButton fx:id="btn20_00" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="6" />
+            <JFXButton fx:id="btn20_01" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <JFXButton fx:id="btn20_02" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <JFXButton fx:id="btn21_00" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+            <JFXButton fx:id="btn21_01" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+            <JFXButton fx:id="btn21_02" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+            <JFXButton fx:id="btn22_00" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+            <JFXButton fx:id="btn22_01" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="7" GridPane.rowIndex="6" />
+            <JFXButton fx:id="btn22_02" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="8" GridPane.rowIndex="6" />
+            <JFXButton fx:id="btn20_10" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="7" />
+            <JFXButton fx:id="btn20_11" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <JFXButton fx:id="btn20_12" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+            <JFXButton fx:id="btn21_10" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+            <JFXButton fx:id="btn21_11" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+            <JFXButton fx:id="btn21_12" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+            <JFXButton fx:id="btn22_10" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="6" GridPane.rowIndex="7" />
+            <JFXButton fx:id="btn22_11" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="7" GridPane.rowIndex="7" />
+            <JFXButton fx:id="btn22_12" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="8" GridPane.rowIndex="7" />
+            <JFXButton fx:id="btn20_20" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.rowIndex="8" />
+            <JFXButton fx:id="btn20_21" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <JFXButton fx:id="btn20_22" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+            <JFXButton fx:id="btn21_20" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+            <JFXButton fx:id="btn21_21" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="4" GridPane.rowIndex="8" />
+            <JFXButton fx:id="btn21_22" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="5" GridPane.rowIndex="8" />
+            <JFXButton fx:id="btn22_20" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="6" GridPane.rowIndex="8" />
+            <JFXButton fx:id="btn22_21" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="7" GridPane.rowIndex="8" />
+            <JFXButton fx:id="btn22_22" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="8" GridPane.rowIndex="8" />
+         </children>
+      </GridPane>
    </children>
 </AnchorPane>
