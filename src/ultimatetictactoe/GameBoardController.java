@@ -11,6 +11,9 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
+import javafx.event.EventHandler;
+import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
@@ -28,261 +31,426 @@ public class GameBoardController implements Initializable
 
     @FXML
     private GridPane macroBoard;
-    @FXML
-    private GridPane microBoard00;
-    @FXML
-    private GridPane microBoard10;
-    @FXML
-    private GridPane microBoard20;
-    @FXML
-    private GridPane microBoard01;
-    @FXML
-    private GridPane microBoard11;
-    @FXML
-    private GridPane microBoard21;
-    @FXML
-    private GridPane microBoard02;
-    @FXML
-    private GridPane microBoard12;
-    @FXML
-    private GridPane microBoard22;
-    @FXML
-    private Button btn00_21;
-    @FXML
-    private Button btn00_10;
-    @FXML
-    private Button btn00_20;
-    @FXML
-    private Button btn00_22;
-    @FXML
-    private Button btn00_11;
-    @FXML
-    private Button btn00_12;
-    @FXML
-    private Button btn00_02;
-    @FXML
-    private Button btn00_01;
-    @FXML
-    private Button btn00_00;
-    @FXML
-    private Button btn10_00;
-    @FXML
-    private Button btn10_10;
-    @FXML
-    private Button btn10_20;
-    @FXML
-    private Button btn10_21;
-    @FXML
-    private Button btn10_11;
-    @FXML
-    private Button btn10_01;
-    @FXML
-    private Button btn10_22;
-    @FXML
-    private Button btn10_12;
-    @FXML
-    private Button btn10_02;
-    @FXML
-    private Button btn20_00;
-    @FXML
-    private Button btn20_10;
-    @FXML
-    private Button btn20_20;
-    @FXML
-    private Button btn20_21;
-    @FXML
-    private Button btn20_11;
-    @FXML
-    private Button btn20_01;
-    @FXML
-    private Button btn20_22;
-    @FXML
-    private Button btn20_12;
-    @FXML
-    private Button btn20_02;
-    @FXML
-    private Button btn01_20;
-    @FXML
-    private Button btn01_21;
-    @FXML
-    private Button btn01_22;
-    @FXML
-    private Button btn01_10;
-    @FXML
-    private Button btn01_11;
-    @FXML
-    private Button btn01_12;
-    @FXML
-    private Button btn01_00;
-    @FXML
-    private Button btn01_01;
-    @FXML
-    private Button btn01_02;
-    @FXML
-    private Button btn11_20;
-    @FXML
-    private Button btn11_10;
-    @FXML
-    private Button btn11_00;
-    @FXML
-    private Button btn11_21;
-    @FXML
-    private Button btn11_11;
-    @FXML
-    private Button btn11_01;
-    @FXML
-    private Button btn11_02;
-    @FXML
-    private Button btn11_12;
-    @FXML
-    private Button btn11_22;
-    @FXML
-    private Button btn21_20;
-    @FXML
-    private Button btn21_10;
-    @FXML
-    private Button btn21_00;
-    @FXML
-    private Button btn21_21;
-    @FXML
-    private Button btn21_11;
-    @FXML
-    private Button btn21_01;
-    @FXML
-    private Button btn21_22;
-    @FXML
-    private Button btn21_12;
-    @FXML
-    private Button btn21_02;
-    @FXML
-    private Button btn02_00;
-    @FXML
-    private Button btn02_01;
-    @FXML
-    private Button btn02_20;
-    @FXML
-    private Button btn02_10;
-    @FXML
-    private Button btn02_11;
-    @FXML
-    private Button btn02_21;
-    @FXML
-    private Button btn02_02;
-    @FXML
-    private Button btn02_12;
-    @FXML
-    private Button btn02_22;
-    @FXML
-    private Button btn12_00;
-    @FXML
-    private Button btn12_01;
-    @FXML
-    private Button btn12_10;
-    @FXML
-    private Button btn12_20;
-    @FXML
-    private Button btn12_11;
-    @FXML
-    private Button btn12_21;
-    @FXML
-    private Button btn12_02;
-    @FXML
-    private Button btn12_12;
-    @FXML
-    private Button btn12_22;
-    @FXML
-    private Button btn22_00;
-    @FXML
-    private Button btn22_10;
-    @FXML
-    private Button btn22_20;
-    @FXML
-    private Button btn22_01;
-    @FXML
-    private Button btn22_11;
-    @FXML
-    private Button btn22_21;
-    @FXML
-    private Button btn22_02;
-    @FXML
-    private Button btn22_12;
-    @FXML
-    private Button btn22_22;
 
-    
     private MainWindowController parent;
-    
+
     int player = 0;
     private List<Button> allTheButtons = new ArrayList<Button>();
-    
+
     /**
      * Initializes the controller class.
      */
-   
     @FXML
     private Label lblPlayer;
     @FXML
     private Label lblTurnCount;
-    
+    @FXML
+    private GridPane microBoardA;
+    @FXML
+    private GridPane microBoardB;
+    @FXML
+    private GridPane microBoardC;
+    @FXML
+    private GridPane microBoardD;
+    @FXML
+    private GridPane microBoardE;
+    @FXML
+    private GridPane microBoardF;
+    @FXML
+    private GridPane microBoardH;
+    @FXML
+    private GridPane microBoardG;
+    @FXML
+    private GridPane microBoardi;
+    @FXML
+    private Button btn1a;
+    @FXML
+    private Button btn6a;
+    @FXML
+    private Button btn2a;
+    @FXML
+    private Button btn3a;
+    @FXML
+    private Button btn9a;
+    @FXML
+    private Button btn5a;
+    @FXML
+    private Button btn8a;
+    @FXML
+    private Button btn7a;
+    @FXML
+    private Button btn4a;
+    @FXML
+    private Button btn1b;
+    @FXML
+    private Button btn2b;
+    @FXML
+    private Button btn3b;
+    @FXML
+    private Button btn6b;
+    @FXML
+    private Button btn5b;
+    @FXML
+    private Button btn4b;
+    @FXML
+    private Button btn9b;
+    @FXML
+    private Button btn8b;
+    @FXML
+    private Button btn7b;
+    @FXML
+    private Button btn1c;
+    @FXML
+    private Button btn2c;
+    @FXML
+    private Button btn3c;
+    @FXML
+    private Button btn6c;
+    @FXML
+    private Button btn5c;
+    @FXML
+    private Button btn4c;
+    @FXML
+    private Button btn9c;
+    @FXML
+    private Button btn8c;
+    @FXML
+    private Button btn7c;
+    @FXML
+    private Button btn3d;
+    @FXML
+    private Button btn6d;
+    @FXML
+    private Button btn9d;
+    @FXML
+    private Button btn2d;
+    @FXML
+    private Button btn5d;
+    @FXML
+    private Button btn8d;
+    @FXML
+    private Button btn1d;
+    @FXML
+    private Button btn4d;
+    @FXML
+    private Button btn7d;
+    @FXML
+    private Button btn3e;
+    @FXML
+    private Button btn2e;
+    @FXML
+    private Button btn1e;
+    @FXML
+    private Button btn6e;
+    @FXML
+    private Button btn5e;
+    @FXML
+    private Button btn4e;
+    @FXML
+    private Button btn7e;
+    @FXML
+    private Button btn8e;
+    @FXML
+    private Button btn9e;
+    @FXML
+    private Button btn3f;
+    @FXML
+    private Button btn2f;
+    @FXML
+    private Button btn1f;
+    @FXML
+    private Button btn6f;
+    @FXML
+    private Button btn5f;
+    @FXML
+    private Button btn4f;
+    @FXML
+    private Button btn9f;
+    @FXML
+    private Button btn8f;
+    @FXML
+    private Button btn7f;
+    @FXML
+    private Button btn1g;
+    @FXML
+    private Button btn2g;
+    @FXML
+    private Button btn3g;
+    @FXML
+    private Button btn4g;
+    @FXML
+    private Button btn5g;
+    @FXML
+    private Button btn6g;
+    @FXML
+    private Button btn7g;
+    @FXML
+    private Button btn8g;
+    @FXML
+    private Button btn9g;
+    @FXML
+    private Button btn1h;
+    @FXML
+    private Button btn2h;
+    @FXML
+    private Button btn3h;
+    @FXML
+    private Button btn4h;
+    @FXML
+    private Button btn5h;
+    @FXML
+    private Button btn6h;
+    @FXML
+    private Button btn7h;
+    @FXML
+    private Button btn8h;
+    @FXML
+    private Button btn9h;
+    @FXML
+    private Button btn1i;
+    @FXML
+    private Button btn2i;
+    @FXML
+    private Button btn3i;
+    @FXML
+    private Button btn4i;
+    @FXML
+    private Button btn5i;
+    @FXML
+    private Button btn6i;
+    @FXML
+    private Button btn7i;
+    @FXML
+    private Button btn8i;
+    @FXML
+    private Button btn9i;
+
+    private boolean everywhere = true;
+    private boolean idA = false;
+    private boolean idB = false;
+    private boolean idC = false;
+    private boolean idD = false;
+    private boolean idE = false;
+    private boolean idF = false;
+    private boolean idG = false;
+    private boolean idH = false;
+    private boolean idI = false;
+
     @Override
     public void initialize(URL url, ResourceBundle rb)
     {
-        allTheButtons.addAll(Arrays.asList(btn00_00,btn00_01,btn00_02,btn00_10,btn00_11,btn00_12,btn00_20,btn00_21,btn00_22,
-                    btn01_00,btn01_01,btn01_02,btn01_10,btn01_11,btn01_12,btn01_20,btn01_21,btn01_22,
-                    btn02_00,btn02_01,btn02_02,btn02_10,btn02_11,btn02_12,btn02_20,btn02_21,btn02_22,
-                    btn10_00,btn10_01,btn10_02,btn10_10,btn10_11,btn10_12,btn10_20,btn10_21,btn10_22,
-                    btn11_00,btn11_01,btn11_02,btn11_10,btn11_11,btn11_12,btn11_20,btn11_21,btn11_22,
-                    btn12_00,btn12_01,btn12_02,btn12_10,btn12_11,btn12_12,btn12_20,btn12_21,btn12_22,
-                    btn20_00,btn20_01,btn20_02,btn20_10,btn20_11,btn20_12,btn20_20,btn20_21,btn20_22,
-                    btn21_00,btn21_01,btn21_02,btn21_10,btn21_11,btn21_12,btn21_20,btn21_21,btn21_22,
-                    btn22_00,btn22_01,btn22_02,btn22_10,btn22_11,btn22_12,btn22_20,btn22_21,btn22_22));
-    }    
+        allTheButtons.addAll(Arrays.asList(btn1a, btn2a, btn3a, btn4a, btn5a, btn6a, btn7a, btn8a, btn9a,
+                btn1b, btn2b, btn3b, btn4b, btn5b, btn6b, btn7b, btn8b, btn9b,
+                btn1c, btn2c, btn3c, btn4c, btn5c, btn6c, btn7c, btn8c, btn9c,
+                btn1d, btn2d, btn3d, btn4d, btn5d, btn6d, btn7d, btn8d, btn9d,
+                btn1e, btn2e, btn3e, btn4e, btn5e, btn6e, btn7e, btn8e, btn9e,
+                btn1f, btn2f, btn3f, btn4f, btn5f, btn6f, btn7f, btn8f, btn9f,
+                btn1g, btn2g, btn3g, btn4g, btn5g, btn6g, btn7g, btn8g, btn9g,
+                btn1h, btn2h, btn3h, btn4h, btn5h, btn6h, btn7h, btn8h, btn9h,
+                btn1i, btn2i, btn3i, btn4i, btn5i, btn6i, btn7i, btn8i, btn9i));
+
+    }
 
     public void setParentWindowController(MainWindowController parent)
     {
         this.parent = parent;
     }
+    Button btn;
 
     @FXML
     private void btnAction(ActionEvent event)
     {
         Integer row = GridPane.getRowIndex((Node) event.getSource());
         Integer col = GridPane.getColumnIndex((Node) event.getSource());
-        
+
         int r = (row == null) ? 0 : row;
         int c = (col == null) ? 0 : col;
-        
-        Button btn = (Button) event.getSource();
-        
-        if(player == 0)
+
+        btn = (Button) event.getSource();
+
+        System.out.println(r);
+        System.out.println(c);
+        System.out.println(btn);
+
+        choosingBetweenMacroOrMicro();
+    }
+
+    private void choosingBetweenMacroOrMicro()
+    {
+        if (everywhere == true)
+        {
+            setPiece();
+            everywhere = false;
+        } else
+        {
+            choosingMicroBoard();
+        }
+
+    }
+
+    private void setPiece()
+    {
+        if (player == 0)
         {
             btn.setText("X");
             player = 1;
-        } 
-        else if (player == 1)
+
+        } else if (player == 1)
         {
             btn.setText("O");
             player = 0;
         }
-        
-        System.out.println(r);
-        System.out.println(c);
-        System.out.println(btn);
+        settingTheNextMicro();
     }
-    
-    
+
     //q,w,z dynamic, 2, 1 that checks big board and one that checks macroboard
     //need to check for winning patterns, if 123, 456, 789, 147 etc is there, = win
     // Win/block/strategy/random
+    private void choosingMicroBoard()
+    {
+        String choosenBtn = btn.getParent().getId();
+        if (choosenBtn == microBoardA.getId() && idA == true)
+        {
+            setPiece();
+        } else if (choosenBtn == microBoardB.getId() && idB == true)
+        {
+            setPiece();
+        } else if (choosenBtn == microBoardC.getId() && idC == true)
+        {
+            setPiece();
+        } else if (choosenBtn == microBoardD.getId() && idD == true)
+        {
+            setPiece();
+        } else if (choosenBtn == microBoardE.getId() && idE == true)
+        {
+            setPiece();
+        } else if (choosenBtn == microBoardF.getId() && idF == true)
+        {
+            setPiece();
+        } else if (choosenBtn == microBoardG.getId() && idG == true)
+        {
+            setPiece();
+        } else if (choosenBtn == microBoardH.getId() && idH == true)
+        {
+            setPiece();
+        } else if (choosenBtn == microBoardi.getId() && idI == true)
+        {
+            setPiece();
+        }
+    }
+
+    private void settingTheNextMicro()
+    {
+        if (btn.getId().contains("1"))
+        {
+            idA = true;
+            idB = false;
+            idC = false;
+            idD = false;
+            idE = false;
+            idF = false;
+            idG = false;
+            idH = false;
+            idI = false;
+        } else if (btn.getId().contains("2"))
+        {
+            idA = false;
+            idB = true;
+            idC = false;
+            idD = false;
+            idE = false;
+            idF = false;
+            idG = false;
+            idH = false;
+            idI = false;
+        } else if (btn.getId().contains("3"))
+        {
+            idA = false;
+            idB = false;
+            idC = true;
+            idD = false;
+            idE = false;
+            idF = false;
+            idG = false;
+            idH = false;
+            idI = false;
+        } else if (btn.getId().contains("4"))
+        {
+            idA = false;
+            idB = false;
+            idC = false;
+            idD = true;
+            idE = false;
+            idF = false;
+            idG = false;
+            idH = false;
+            idI = false;
+        } else if (btn.getId().contains("5"))
+        {
+            idA = false;
+            idB = false;
+            idC = false;
+            idD = false;
+            idE = true;
+            idF = false;
+            idG = false;
+            idH = false;
+            idI = false;
+        } else if (btn.getId().contains("6"))
+        {
+            idA = false;
+            idB = false;
+            idC = false;
+            idD = false;
+            idE = false;
+            idF = true;
+            idG = false;
+            idH = false;
+            idI = false;
+        } else if (btn.getId().contains("7"))
+        {
+            idA = false;
+            idB = false;
+            idC = false;
+            idD = false;
+            idE = false;
+            idF = false;
+            idG = true;
+            idH = false;
+            idI = false;
+        } else if (btn.getId().contains("8"))
+        {
+            idA = false;
+            idB = false;
+            idC = false;
+            idD = false;
+            idE = false;
+            idF = false;
+            idG = false;
+            idH = true;
+            idI = false;
+        } else if (btn.getId().contains("9"))
+        {
+            idA = false;
+            idB = false;
+            idC = false;
+            idD = false;
+            idE = false;
+            idF = false;
+            idG = false;
+            idH = false;
+            idI = true;
+        }
+    }
+
     private void win()
     {
-        if (btn00_00.contains(player, player)) 
+        if (btn1a.contains(player, player))
         {
-            System.out.println("You won!" + lblPlayer.getText()); 
+            System.out.println("You won!" + lblPlayer.getText());
             //stop game
         }
-        
+
     }
-    
-      
+
 }
