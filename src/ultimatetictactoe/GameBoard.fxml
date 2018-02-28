@@ -119,5 +119,7 @@
             <JFXButton fx:id="btn22_22" onAction="#btnAction" prefHeight="53.0" prefWidth="58.0" GridPane.columnIndex="8" GridPane.rowIndex="8" />
          </children>
       </GridPane>
+      <Label fx:id="lblPlayer" layoutX="14.0" layoutY="508.0" text="Player" />
+      <Label fx:id="lblTurnCount" layoutX="487.0" layoutY="508.0" text="turnCount" />
    </children>
 </AnchorPane>

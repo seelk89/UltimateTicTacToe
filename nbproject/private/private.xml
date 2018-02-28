@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/Elisabeth/Documents/NetBeansProjects/UltimateTicTacToe/src/game/GameState.java</file>
+            <file>file:/C:/Users/Elisabeth/Documents/NetBeansProjects/UltimateTicTacToe/src/field/Field.java</file>
+            <file>file:/C:/Users/Elisabeth/Documents/NetBeansProjects/UltimateTicTacToe/src/ultimatetictactoe/GameBoardController.java</file>
+            <file>file:/C:/Users/Elisabeth/Documents/NetBeansProjects/UltimateTicTacToe/src/move/Move.java</file>
+            <file>file:/C:/Users/Elisabeth/Documents/NetBeansProjects/UltimateTicTacToe/src/ultimatetictactoe/MainWindowController.java</file>
+            <file>file:/C:/Users/Elisabeth/Documents/NetBeansProjects/UltimateTicTacToe/src/bot/Bot.java</file>
+            <file>file:/C:/Users/Elisabeth/Documents/NetBeansProjects/UltimateTicTacToe/src/game/GameManager.java</file>
+        </group>
     </open-files>
 </project-private>

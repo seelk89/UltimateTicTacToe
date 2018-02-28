@@ -189,10 +189,6 @@ public class GameBoardController implements Initializable
     @FXML
     private Button btn22_22;
 
-    @FXML
-    private Label txtPlayer;
-    @FXML
-    private Label txtTurnCount;
     
     private MainWindowController parent;
     
@@ -202,6 +198,12 @@ public class GameBoardController implements Initializable
     /**
      * Initializes the controller class.
      */
+   
+    @FXML
+    private Label lblPlayer;
+    @FXML
+    private Label lblTurnCount;
+    
     @Override
     public void initialize(URL url, ResourceBundle rb)
     {
@@ -235,13 +237,31 @@ public class GameBoardController implements Initializable
         if(player == 0)
         {
             btn.setText("X");
+            player = 1;
         } else
         {
             btn.setText("O");
-        }
+            player = 0;
+        } 
         
         System.out.println(r);
         System.out.println(c);
         System.out.println(btn);
     }
+    
+    
+    //q,w,z dynamic, 2, 1 that checks big board and one that checks macroboard
+    //need to check for winning patterns, if 123, 456, 789, 147 etc is there, = win
+    // Win/block/strategy/random
+    private void win()
+    {
+        if (btn00_00.contains(player, player)) 
+        {
+            System.out.println("You won!" + lblPlayer.getText()); 
+            //stop game
+        }
+        
+    }
+    
+      
 }
