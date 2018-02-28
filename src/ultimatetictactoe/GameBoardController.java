@@ -195,6 +195,7 @@ public class GameBoardController implements Initializable
     
     int player = 0;
     private List<Button> allTheButtons = new ArrayList<Button>();
+    private String [][] board = new String [9][9];
     
     /**
      * Initializes the controller class.
@@ -252,8 +253,6 @@ public class GameBoardController implements Initializable
         System.out.println(btn);
         System.out.println(board[r][c]);
     }
-    
-    private String [][] board = new String [9][9];
     
     private void fillBoard()
     {
