@@ -5,20 +5,35 @@
  */
 package move;
 
+import javafx.scene.Node;
+import javafx.scene.layout.GridPane;
+
 /**
  *
  * @author Elisabeth
  */
 public class Move implements IMove {
+    
+    private Integer X = 0;
+    private Integer Y = 0;
 
     @Override
     public int getX() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return X;
     }
 
     @Override
     public int getY() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return Y;
     }
-    
+
+    public void setX(Integer X)
+    {
+        this.X = X;
+    }
+
+    public void setY(Integer Y)
+    {
+        this.Y = Y;
+    }
 }
