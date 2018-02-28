@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane id="AnchorPane" prefHeight="540.0" prefWidth="554.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ultimatetictactoe.GameBoardController">
+<AnchorPane id="AnchorPane" prefHeight="540.0" prefWidth="554.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ultimatetictactoe.GameBoardController">
    <children>
       <GridPane fx:id="macroBoard" layoutX="14.0" layoutY="14.0" prefHeight="485.0" prefWidth="527.0">
         <columnConstraints>
@@ -230,7 +230,7 @@
             </GridPane>
          </children>
       </GridPane>
-      <Label fx:id="txtPlayer" layoutX="14.0" layoutY="508.0" text="Player" />
-      <Label fx:id="txtTurnCount" layoutX="487.0" layoutY="508.0" text="turnCount" />
+      <Label fx:id="lblPlayer" layoutX="14.0" layoutY="508.0" text="Player" />
+      <Label fx:id="lblTurnCount" layoutX="487.0" layoutY="508.0" text="turnCount" />
    </children>
 </AnchorPane>

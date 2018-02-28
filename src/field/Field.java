@@ -17,7 +17,7 @@ public class Field implements IField{
     @Override
     public void clearBoard()
     {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       //clear board
     }
 
     @Override
