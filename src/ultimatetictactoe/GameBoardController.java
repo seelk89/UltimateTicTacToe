@@ -5,6 +5,7 @@
  */
 package ultimatetictactoe;
 
+import com.jfoenix.controls.JFXButton;
 import field.IField;
 import java.net.URL;
 import java.util.ArrayList;
@@ -30,10 +31,6 @@ import javafx.scene.layout.GridPane;
 public class GameBoardController implements Initializable
 {
 
-    @FXML
-
-    private GridPane macroBoard;
-
     private MainWindowController parent;
 
     int player = 0;
@@ -46,186 +43,6 @@ public class GameBoardController implements Initializable
     private Label lblPlayer;
     @FXML
     private Label lblTurnCount;
-    @FXML
-    private GridPane microBoardA;
-    @FXML
-    private GridPane microBoardB;
-    @FXML
-    private GridPane microBoardC;
-    @FXML
-    private GridPane microBoardD;
-    @FXML
-    private GridPane microBoardE;
-    @FXML
-    private GridPane microBoardF;
-    @FXML
-    private GridPane microBoardH;
-    @FXML
-    private GridPane microBoardG;
-    @FXML
-    private GridPane microBoardi;
-    @FXML
-    private Button btn1a;
-    @FXML
-    private Button btn6a;
-    @FXML
-    private Button btn2a;
-    @FXML
-    private Button btn3a;
-    @FXML
-    private Button btn9a;
-    @FXML
-    private Button btn5a;
-    @FXML
-    private Button btn8a;
-    @FXML
-    private Button btn7a;
-    @FXML
-    private Button btn4a;
-    @FXML
-    private Button btn1b;
-    @FXML
-    private Button btn2b;
-    @FXML
-    private Button btn3b;
-    @FXML
-    private Button btn6b;
-    @FXML
-    private Button btn5b;
-    @FXML
-    private Button btn4b;
-    @FXML
-    private Button btn9b;
-    @FXML
-    private Button btn8b;
-    @FXML
-    private Button btn7b;
-    @FXML
-    private Button btn1c;
-    @FXML
-    private Button btn2c;
-    @FXML
-    private Button btn3c;
-    @FXML
-    private Button btn6c;
-    @FXML
-    private Button btn5c;
-    @FXML
-    private Button btn4c;
-    @FXML
-    private Button btn9c;
-    @FXML
-    private Button btn8c;
-    @FXML
-    private Button btn7c;
-    @FXML
-    private Button btn3d;
-    @FXML
-    private Button btn6d;
-    @FXML
-    private Button btn9d;
-    @FXML
-    private Button btn2d;
-    @FXML
-    private Button btn5d;
-    @FXML
-    private Button btn8d;
-    @FXML
-    private Button btn1d;
-    @FXML
-    private Button btn4d;
-    @FXML
-    private Button btn7d;
-    @FXML
-    private Button btn3e;
-    @FXML
-    private Button btn2e;
-    @FXML
-    private Button btn1e;
-    @FXML
-    private Button btn6e;
-    @FXML
-    private Button btn5e;
-    @FXML
-    private Button btn4e;
-    @FXML
-    private Button btn7e;
-    @FXML
-    private Button btn8e;
-    @FXML
-    private Button btn9e;
-    @FXML
-    private Button btn3f;
-    @FXML
-    private Button btn2f;
-    @FXML
-    private Button btn1f;
-    @FXML
-    private Button btn6f;
-    @FXML
-    private Button btn5f;
-    @FXML
-    private Button btn4f;
-    @FXML
-    private Button btn9f;
-    @FXML
-    private Button btn8f;
-    @FXML
-    private Button btn7f;
-    @FXML
-    private Button btn1g;
-    @FXML
-    private Button btn2g;
-    @FXML
-    private Button btn3g;
-    @FXML
-    private Button btn4g;
-    @FXML
-    private Button btn5g;
-    @FXML
-    private Button btn6g;
-    @FXML
-    private Button btn7g;
-    @FXML
-    private Button btn8g;
-    @FXML
-    private Button btn9g;
-    @FXML
-    private Button btn1h;
-    @FXML
-    private Button btn2h;
-    @FXML
-    private Button btn3h;
-    @FXML
-    private Button btn4h;
-    @FXML
-    private Button btn5h;
-    @FXML
-    private Button btn6h;
-    @FXML
-    private Button btn7h;
-    @FXML
-    private Button btn8h;
-    @FXML
-    private Button btn9h;
-    @FXML
-    private Button btn1i;
-    @FXML
-    private Button btn2i;
-    @FXML
-    private Button btn3i;
-    @FXML
-    private Button btn4i;
-    @FXML
-    private Button btn5i;
-    @FXML
-    private Button btn6i;
-    @FXML
-    private Button btn7i;
-    @FXML
-    private Button btn8i;
-    @FXML
-    private Button btn9i;
 
     private String[][] board = new String[9][9];
 
@@ -239,6 +56,169 @@ public class GameBoardController implements Initializable
     private boolean idG = false;
     private boolean idH = false;
     private boolean idI = false;
+    
+    @FXML
+    private JFXButton btn0_0;
+    @FXML
+    private JFXButton btn1_0;
+    @FXML
+    private JFXButton btn2_0;
+    @FXML
+    private JFXButton btn3_0;
+    @FXML
+    private JFXButton btn4_0;
+    @FXML
+    private JFXButton btn5_0;
+    @FXML
+    private JFXButton btn6_0;
+    @FXML
+    private JFXButton btn7_0;
+    @FXML
+    private JFXButton btn8_0;
+    @FXML
+    private JFXButton btn0_1;
+    @FXML
+    private JFXButton btn1_1;
+    @FXML
+    private JFXButton btn2_1;
+    @FXML
+    private JFXButton btn3_1;
+    @FXML
+    private JFXButton btn4_1;
+    @FXML
+    private JFXButton btn5_1;
+    @FXML
+    private JFXButton btn6_1;
+    @FXML
+    private JFXButton btn7_1;
+    @FXML
+    private JFXButton btn8_1;
+    @FXML
+    private JFXButton btn0_2;
+    @FXML
+    private JFXButton btn1_2;
+    @FXML
+    private JFXButton btn2_2;
+    @FXML
+    private JFXButton btn3_2;
+    @FXML
+    private JFXButton btn4_2;
+    @FXML
+    private JFXButton btn5_2;
+    @FXML
+    private JFXButton btn6_2;
+    @FXML
+    private JFXButton btn7_2;
+    @FXML
+    private JFXButton btn8_2;
+    @FXML
+    private JFXButton btn0_3;
+    @FXML
+    private JFXButton btn1_3;
+    @FXML
+    private JFXButton btn2_3;
+    @FXML
+    private JFXButton btn3_3;
+    @FXML
+    private JFXButton btn4_3;
+    @FXML
+    private JFXButton btn5_3;
+    @FXML
+    private JFXButton btn6_3;
+    @FXML
+    private JFXButton btn7_3;
+    @FXML
+    private JFXButton btn8_3;
+    @FXML
+    private JFXButton btn0_4;
+    @FXML
+    private JFXButton btn1_4;
+    @FXML
+    private JFXButton btn2_4;
+    @FXML
+    private JFXButton btn3_4;
+    @FXML
+    private JFXButton btn4_4;
+    @FXML
+    private JFXButton btn5_4;
+    @FXML
+    private JFXButton btn6_4;
+    @FXML
+    private JFXButton btn7_4;
+    @FXML
+    private JFXButton btn8_4;
+    @FXML
+    private JFXButton btn0_5;
+    @FXML
+    private JFXButton btn1_5;
+    @FXML
+    private JFXButton btn2_5;
+    @FXML
+    private JFXButton btn3_5;
+    @FXML
+    private JFXButton btn4_5;
+    @FXML
+    private JFXButton btn5_5;
+    @FXML
+    private JFXButton btn6_5;
+    @FXML
+    private JFXButton btn7_5;
+    @FXML
+    private JFXButton btn8_5;
+    @FXML
+    private JFXButton btn0_6;
+    @FXML
+    private JFXButton btn1_6;
+    @FXML
+    private JFXButton btn2_6;
+    @FXML
+    private JFXButton btn3_6;
+    @FXML
+    private JFXButton btn4_6;
+    @FXML
+    private JFXButton btn5_6;
+    @FXML
+    private JFXButton btn6_6;
+    @FXML
+    private JFXButton btn7_6;
+    @FXML
+    private JFXButton btn8_6;
+    @FXML
+    private JFXButton btn0_7;
+    @FXML
+    private JFXButton btn1_7;
+    @FXML
+    private JFXButton btn2_7;
+    @FXML
+    private JFXButton btn3_7;
+    @FXML
+    private JFXButton btn4_7;
+    @FXML
+    private JFXButton btn5_7;
+    @FXML
+    private JFXButton btn6_7;
+    @FXML
+    private JFXButton btn7_7;
+    @FXML
+    private JFXButton btn8_7;
+    @FXML
+    private JFXButton btn0_8;
+    @FXML
+    private JFXButton btn1_8;
+    @FXML
+    private JFXButton btn2_8;
+    @FXML
+    private JFXButton btn3_8;
+    @FXML
+    private JFXButton btn4_8;
+    @FXML
+    private JFXButton btn5_8;
+    @FXML
+    private JFXButton btn6_8;
+    @FXML
+    private JFXButton btn7_8;
+    @FXML
+    private JFXButton btn8_8;
 
     /**
      * Initializes the controller class.
@@ -246,15 +226,15 @@ public class GameBoardController implements Initializable
     @Override
     public void initialize(URL url, ResourceBundle rb)
     {
-        allTheButtons.addAll(Arrays.asList(btn1a, btn2a, btn3a, btn4a, btn5a, btn6a, btn7a, btn8a, btn9a,
-                btn1b, btn2b, btn3b, btn4b, btn5b, btn6b, btn7b, btn8b, btn9b,
-                btn1c, btn2c, btn3c, btn4c, btn5c, btn6c, btn7c, btn8c, btn9c,
-                btn1d, btn2d, btn3d, btn4d, btn5d, btn6d, btn7d, btn8d, btn9d,
-                btn1e, btn2e, btn3e, btn4e, btn5e, btn6e, btn7e, btn8e, btn9e,
-                btn1f, btn2f, btn3f, btn4f, btn5f, btn6f, btn7f, btn8f, btn9f,
-                btn1g, btn2g, btn3g, btn4g, btn5g, btn6g, btn7g, btn8g, btn9g,
-                btn1h, btn2h, btn3h, btn4h, btn5h, btn6h, btn7h, btn8h, btn9h,
-                btn1i, btn2i, btn3i, btn4i, btn5i, btn6i, btn7i, btn8i, btn9i));
+        allTheButtons.addAll(Arrays.asList(btn0_0, btn0_1, btn0_2, btn0_3, btn0_4, btn0_5, btn0_6, btn0_7, btn0_8,
+        btn1_0, btn1_1, btn1_2, btn1_3, btn1_4, btn1_5, btn1_6, btn1_7, btn1_8,
+        btn2_0, btn2_1, btn2_2, btn2_3, btn3_4, btn4_5, btn5_6, btn6_7, btn7_8,
+        btn3_0, btn3_1, btn3_2, btn3_3, btn3_4, btn3_5, btn3_6, btn3_7, btn3_8,
+        btn4_0, btn4_1, btn4_2, btn4_3, btn4_4, btn4_5, btn4_6, btn4_7, btn4_8,
+        btn5_0, btn5_1, btn5_2, btn5_3, btn5_4, btn5_5, btn5_6, btn5_7, btn5_8,
+        btn6_0, btn6_1, btn6_2, btn6_3, btn6_4, btn6_5, btn6_6, btn6_7, btn6_8,
+        btn7_0, btn7_1, btn7_2, btn7_3, btn7_4, btn7_5, btn7_6, btn7_7, btn7_8,
+        btn8_0, btn8_1, btn8_2, btn8_3, btn8_4, btn8_5, btn8_6, btn8_7, btn8_8));
 
         fillBoard();
 
@@ -318,35 +298,55 @@ public class GameBoardController implements Initializable
     // Win/block/strategy/random
     private void choosingMicroBoard()
     {
-        String choosenBtn = btn.getParent().getId();
-        if (choosenBtn == microBoardA.getId() && idA == true)
-        {
-            setPiece();
-        } else if (choosenBtn == microBoardB.getId() && idB == true)
-        {
-            setPiece();
-        } else if (choosenBtn == microBoardC.getId() && idC == true)
-        {
-            setPiece();
-        } else if (choosenBtn == microBoardD.getId() && idD == true)
-        {
-            setPiece();
-        } else if (choosenBtn == microBoardE.getId() && idE == true)
-        {
-            setPiece();
-        } else if (choosenBtn == microBoardF.getId() && idF == true)
-        {
-            setPiece();
-        } else if (choosenBtn == microBoardG.getId() && idG == true)
-        {
-            setPiece();
-        } else if (choosenBtn == microBoardH.getId() && idH == true)
-        {
-            setPiece();
-        } else if (choosenBtn == microBoardi.getId() && idI == true)
-        {
-            setPiece();
-        }
+//        String choosenBtn = btn.getParent().getId();
+//        if (choosenBtn == microBoardA.getId() && idA == true)
+//        {
+//            setPiece();
+//        } else if (choosenBtn == microBoardB.getId() && idB == true)
+//        {
+//            setPiece();
+//        {
+//            setPiece();
+//        } else if (choosenBtn == microBoardD.getId() && idD == true)
+//        {
+//            setPiece();
+//        } else if (choosenBtn == microBoardE.getId() && idE == true)
+//        {
+//            setPiece();
+//        } else if (choosenBtn == microBoardF.getId() && idF == true)
+//        {
+//            setPiece();
+//        } else if (choosenBtn == microBoardG.getId() && idG == true)
+//        {
+//            setPiece();
+//        } else if (choosenBtn == microBoardH.getId() && idH == true)
+//        {
+//            setPiece();
+//        } else if (choosenBtn == microBoardi.getId() && idI == true)
+//        {
+//            setPiece();
+//        }} else if (choosenBtn == microBoardC.getId() && idC == true)
+//        {
+//            setPiece();
+//        } else if (choosenBtn == microBoardD.getId() && idD == true)
+//        {
+//            setPiece();
+//        } else if (choosenBtn == microBoardE.getId() && idE == true)
+//        {
+//            setPiece();
+//        } else if (choosenBtn == microBoardF.getId() && idF == true)
+//        {
+//            setPiece();
+//        } else if (choosenBtn == microBoardG.getId() && idG == true)
+//        {
+//            setPiece();
+//        } else if (choosenBtn == microBoardH.getId() && idH == true)
+//        {
+//            setPiece();
+//        } else if (choosenBtn == microBoardi.getId() && idI == true)
+//        {
+//            setPiece();
+//        }
     }
 
     private void settingTheNextMicro()
@@ -467,7 +467,7 @@ public class GameBoardController implements Initializable
 
     private void win()
     {
-        if (btn1a.contains(player, player))
+        if (btn0_0.contains(player, player))
         {
             System.out.println("You won!" + lblPlayer.getText());
             //stop game
@@ -475,9 +475,11 @@ public class GameBoardController implements Initializable
 
     }
 
-     private void checkThreeInARow(Button a, Button b, Button c, String XO) {
-        if (a.getText().equals(XO) && b.getText().equals(XO) && c.getText().equals(XO)){
-            System.out.println(XO + " Wins"); 
+    private void checkThreeInARow(Button a, Button b, Button c, String XO)
+    {
+        if (a.getText().equals(XO) && b.getText().equals(XO) && c.getText().equals(XO))
+        {
+            System.out.println(XO + " Wins");
         }
     }
 //                    Will be inserted in a button method, not sure if 10 methods or just 1     
@@ -492,5 +494,5 @@ public class GameBoardController implements Initializable
 //                    checkThreeInARow(btn3, btn6, btn9, xOrO);
 //                    checkThreeInARow(btn1, btn5, btn9, xOrO);
 //                    checkThreeInARow(btn3, btn5, btn7, xOrO);
-     
+
 }
