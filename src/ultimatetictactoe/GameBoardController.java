@@ -45,6 +45,8 @@ public class GameBoardController implements Initializable
     private Label lblTurnCount;
 
     private String[][] board = new String[9][9];
+    
+    private String[][] macroBoard = new String[3][3];
 
     private boolean everywhere = true;
     private boolean idA = false;
@@ -236,7 +238,8 @@ public class GameBoardController implements Initializable
         btn7_0, btn7_1, btn7_2, btn7_3, btn7_4, btn7_5, btn7_6, btn7_7, btn7_8,
         btn8_0, btn8_1, btn8_2, btn8_3, btn8_4, btn8_5, btn8_6, btn8_7, btn8_8));
 
-        fillBoard();
+        fillAvailableBoard();
+        allAvailableMacroBoard();
 
     }
 
@@ -246,6 +249,26 @@ public class GameBoardController implements Initializable
     }
     Button btn;
 
+        int r = 0;
+        int c= 0;
+        int mrx = r % 3;
+        int mcy = c % 3;
+        
+    private void setPiece()
+    {
+        if (player == 0)
+        {
+            btn.setText("X");
+            player = 1;
+
+        } else if (player == 1)
+        {
+            btn.setText("O");
+            player = 0;
+        }
+        settingTheNextMicro();
+    }
+        
     @FXML
     private void btnAction(ActionEvent event)
     {
@@ -254,6 +277,8 @@ public class GameBoardController implements Initializable
 
         int r = (row == null) ? 0 : row;
         int c = (col == null) ? 0 : col;
+        
+        
 
         btn = (Button) event.getSource();
 
@@ -261,8 +286,31 @@ public class GameBoardController implements Initializable
         System.out.println(c);
         System.out.println(btn);
         System.out.println(board[r][c]);
+        
+       
+        macroBoard[mrx][mcy] = IField.AVAILABLE_FIELD;
+        
+        System.out.println(macroBoard[mrx][mcy]);
+        
+        if (board[r][c] == "-1")
+        {
+             setPiece();
+            int mrx = r % 3;
+            int mcy = c % 3;
+              
+            fillEmptyMacroBoard();
+            macroBoard[mrx][mcy] = IField.AVAILABLE_FIELD;
+            board[1][1] = IField.AVAILABLE_FIELD;
+            
+        } else
+        {
+            System.out.println("Fail");
+        }
+        
+     
 
-        choosingBetweenMacroOrMicro();
+
+        
     }
 
     private void choosingBetweenMacroOrMicro()
@@ -278,24 +326,9 @@ public class GameBoardController implements Initializable
 
     }
 
-    private void setPiece()
-    {
-        if (player == 0)
-        {
-            btn.setText("X");
-            player = 1;
 
-        } else if (player == 1)
-        {
-            btn.setText("O");
-            player = 0;
-        }
-        settingTheNextMicro();
-    }
 
-    //q,w,z dynamic, 2, 1 that checks big board and one that checks macroboard
-    //need to check for winning patterns, if 123, 456, 789, 147 etc is there, = win
-    // Win/block/strategy/random
+   
     private void choosingMicroBoard()
     {
 //        String choosenBtn = btn.getParent().getId();
@@ -454,7 +487,18 @@ public class GameBoardController implements Initializable
 
     }
 
-    private void fillBoard()
+    private void fillAvailableBoard()
+    {
+        for (int i = 0; i < board.length; i++)
+        {
+            for (int j = 0; j < board.length; j++)
+            {
+                board[i][j] = IField.AVAILABLE_FIELD;
+            }
+        }
+    }
+    
+     private void fillEmptyBoard()
     {
         for (int i = 0; i < board.length; i++)
         {
@@ -465,34 +509,28 @@ public class GameBoardController implements Initializable
         }
     }
 
-    private void win()
+      private void allAvailableMacroBoard()
     {
-        if (btn0_0.contains(player, player))
+        for (int i = 0; i < macroBoard.length; i++)
         {
-            System.out.println("You won!" + lblPlayer.getText());
-            //stop game
-        }
-
-    }
-
-    private void checkThreeInARow(Button a, Button b, Button c, String XO)
-    {
-        if (a.getText().equals(XO) && b.getText().equals(XO) && c.getText().equals(XO))
-        {
-            System.out.println(XO + " Wins");
+            for (int j = 0; j < macroBoard.length; j++)
+            {
+                macroBoard[i][j] = IField.AVAILABLE_FIELD;
+            }
         }
     }
-//                    Will be inserted in a button method, not sure if 10 methods or just 1     
-//                    Button btn = (Button) event.getSource();
-//                    String xOrO = player == "X" ? "X" : "O";
-//                    btn.setText(xOrO);
-//                    checkThreeInARow(btn1, btn2, btn3, xOrO); 
-//                    checkThreeInARow(btn1, btn4, btn7, xOrO);
-//                    checkThreeInARow(btn2, btn5, btn8, xOrO);
-//                    checkThreeInARow(btn4, btn5, btn6, xOrO);
-//                    checkThreeInARow(btn7, btn8, btn9, xOrO);
-//                    checkThreeInARow(btn3, btn6, btn9, xOrO);
-//                    checkThreeInARow(btn1, btn5, btn9, xOrO);
-//                    checkThreeInARow(btn3, btn5, btn7, xOrO);
+      
+       private void fillEmptyMacroBoard()
+    {
+        for (int i = 0; i < macroBoard.length; i++)
+        {
+            for (int j = 0; j < macroBoard.length; j++)
+            {
+                macroBoard[i][j] = IField.EMPTY_FIELD;
+            }
+        }
+        fillEmptyBoard();
+    }
+    
 
 }
