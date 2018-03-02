@@ -230,7 +230,7 @@ public class GameBoardController implements Initializable
     {
         allTheButtons.addAll(Arrays.asList(btn0_0, btn0_1, btn0_2, btn0_3, btn0_4, btn0_5, btn0_6, btn0_7, btn0_8,
         btn1_0, btn1_1, btn1_2, btn1_3, btn1_4, btn1_5, btn1_6, btn1_7, btn1_8,
-        btn2_0, btn2_1, btn2_2, btn2_3, btn3_4, btn4_5, btn5_6, btn6_7, btn7_8,
+        btn2_0, btn2_1, btn2_2, btn2_3, btn2_4, btn2_5, btn2_6, btn2_7, btn2_8,
         btn3_0, btn3_1, btn3_2, btn3_3, btn3_4, btn3_5, btn3_6, btn3_7, btn3_8,
         btn4_0, btn4_1, btn4_2, btn4_3, btn4_4, btn4_5, btn4_6, btn4_7, btn4_8,
         btn5_0, btn5_1, btn5_2, btn5_3, btn5_4, btn5_5, btn5_6, btn5_7, btn5_8,
