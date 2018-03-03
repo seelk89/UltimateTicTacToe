@@ -36,17 +36,10 @@ public class GameBoardController implements Initializable
     int player = 0;
     private List<Button> allTheButtons = new ArrayList<Button>();
 
-    /**
-     * Initializes the controller class.
-     */
     @FXML
     private Label lblPlayer;
     @FXML
     private Label lblTurnCount;
-
-    private String[][] board = new String[9][9];
-    
-    private String[][] macroBoard = new String[3][3];
 
     private boolean everywhere = true;
     private boolean idA = false;
@@ -221,7 +214,10 @@ public class GameBoardController implements Initializable
     private JFXButton btn7_8;
     @FXML
     private JFXButton btn8_8;
-
+    
+    private String[][] macroBoard = new String[3][3];
+    private String[][] board = new String[9][9];
+    
     /**
      * Initializes the controller class.
      */
@@ -238,21 +234,23 @@ public class GameBoardController implements Initializable
         btn7_0, btn7_1, btn7_2, btn7_3, btn7_4, btn7_5, btn7_6, btn7_7, btn7_8,
         btn8_0, btn8_1, btn8_2, btn8_3, btn8_4, btn8_5, btn8_6, btn8_7, btn8_8));
 
-        fillAvailableBoard();
         allAvailableMacroBoard();
-
+        //printMacroBoard();
+        activeMicroBoard();
+        //printBoard();
     }
 
     public void setParentWindowController(MainWindowController parent)
     {
         this.parent = parent;
     }
+    
     Button btn;
 
-        int r = 0;
-        int c= 0;
-        int mrx = r % 3;
-        int mcy = c % 3;
+    int r = 0;
+    int c= 0;
+    int mrx = r % 3;
+    int mcy = c % 3;
         
     private void setPiece()
     {
@@ -266,7 +264,7 @@ public class GameBoardController implements Initializable
             btn.setText("O");
             player = 0;
         }
-        settingTheNextMicro();
+        //settingTheNextMicro();
     }
         
     @FXML
@@ -278,39 +276,136 @@ public class GameBoardController implements Initializable
         int r = (row == null) ? 0 : row;
         int c = (col == null) ? 0 : col;
         
+        int mrx = r % 3;
+        int mcy = c % 3;
         
-
         btn = (Button) event.getSource();
 
-        System.out.println(r);
-        System.out.println(c);
-        System.out.println(btn);
+        //System.out.println(r);
+        //System.out.println(c);
+        //System.out.println(btn);
         System.out.println(board[r][c]);
-        
-       
-        macroBoard[mrx][mcy] = IField.AVAILABLE_FIELD;
         
         System.out.println(macroBoard[mrx][mcy]);
         
         if (board[r][c] == "-1")
         {
-             setPiece();
-            int mrx = r % 3;
-            int mcy = c % 3;
+            System.out.println(board[r][c]);
+            setPiece();
               
             fillEmptyMacroBoard();
             macroBoard[mrx][mcy] = IField.AVAILABLE_FIELD;
-            board[1][1] = IField.AVAILABLE_FIELD;
             
+            fillEmptyBoard();
+            activeMicroBoard();
         } else
         {
             System.out.println("Fail");
+        } 
+        
+    }
+    
+    private void activeMicroBoard()
+    {
+        for (int i = 0; i < macroBoard.length; i++)
+        {
+            for (int j = 0; j < macroBoard.length; j++)
+            {
+                //Checks if the location in the macroBoard is == -1, if so set the coresponding 3x3 in the board to available.
+                if(macroBoard[i][j] == IField.AVAILABLE_FIELD)
+                {
+                    int microBoardX = 0;
+                    int microBoardY = 0;
+                    
+                    if(i == 1)
+                    {
+                        microBoardX = microBoardX + 3;
+                    }
+                    
+                    if(i == 2)
+                    {
+                        microBoardX = microBoardX + 6;
+                    }
+                    
+                    if(j == 1)
+                    {
+                        microBoardY = microBoardY + 3;
+                    }
+                    
+                    if(j == 2)
+                    {
+                        microBoardY = microBoardY + 6;
+                    }
+                    
+                    //Setting is done here
+                    for (int k = 0; k < 3; k++)
+                    {
+                        for (int l = 0; l < 3; l++)
+                        {
+                            board[k + microBoardX][l + microBoardY] = IField.AVAILABLE_FIELD;
+                        }   
+                    }
+                } 
+                
+                //Checks if the location in the macroBoard is == ., if so set the coresponding 3x3 in the board to empty.
+                if(macroBoard[i][j] == IField.EMPTY_FIELD)
+                {
+                    int microBoardX = 0;
+                    int microBoardY = 0;
+                    
+                    if(i == 1)
+                    {
+                        microBoardX = microBoardX + 3;
+                    }
+                    
+                    if(i == 2)
+                    {
+                        microBoardX = microBoardX + 6;
+                    }
+                    
+                    if(j == 1)
+                    {
+                        microBoardY = microBoardY + 3;
+                    }
+                    
+                    if(j == 2)
+                    {
+                        microBoardY = microBoardY + 6;
+                    }
+                    
+                    //Setting is done here
+                    for (int k = 0; k + microBoardX < 3 + microBoardX; k++)
+                    {
+                        for (int l = 0; l + microBoardY < 3 + microBoardY; l++)
+                        {
+                            board[k][l] = IField.EMPTY_FIELD;
+                        }   
+                    }
+                }
+            }
         }
-        
-     
-
-
-        
+    }
+    
+    private void printBoard()
+    {
+        for (int i = 0; i < board.length; i++)
+        {
+            for (int j = 0; j < board.length; j++)
+            {
+                System.out.println(board[i][j]);
+            }
+        }
+    }
+    
+    private void printMacroBoard()
+    {
+        for (int i = 0; i < macroBoard.length; i++)
+        {
+            for (int j = 0; j < macroBoard.length; j++)
+            {
+                System.out.println(macroBoard[i][j]);
+            }
+        }
     }
 
     private void choosingBetweenMacroOrMicro()
@@ -325,9 +420,6 @@ public class GameBoardController implements Initializable
         }
 
     }
-
-
-
    
     private void choosingMicroBoard()
     {
@@ -509,7 +601,7 @@ public class GameBoardController implements Initializable
         }
     }
 
-      private void allAvailableMacroBoard()
+    private void allAvailableMacroBoard()
     {
         for (int i = 0; i < macroBoard.length; i++)
         {
@@ -520,7 +612,7 @@ public class GameBoardController implements Initializable
         }
     }
       
-       private void fillEmptyMacroBoard()
+    private void fillEmptyMacroBoard()
     {
         for (int i = 0; i < macroBoard.length; i++)
         {
@@ -529,8 +621,5 @@ public class GameBoardController implements Initializable
                 macroBoard[i][j] = IField.EMPTY_FIELD;
             }
         }
-        fillEmptyBoard();
     }
-    
-
 }
