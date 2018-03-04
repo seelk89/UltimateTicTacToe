@@ -227,6 +227,9 @@ public class GameBoardController implements Initializable
         //printMacroBoard();
         activeMicroBoard();
         //printBoard();
+
+
+
     }
 
     public void setParentWindowController(MainWindowController parent)
@@ -273,13 +276,13 @@ public class GameBoardController implements Initializable
         //System.out.println(r);
         //System.out.println(c);
         //System.out.println(btn);
-        System.out.println(board[r][c]);
+//       System.out.println(board[r][c]);
 
         System.out.println(macroBoard[mrx][mcy]);
 
         if (board[r][c] == "-1")
         {
-            System.out.println(board[r][c]);
+//            System.out.println(board[r][c]);
             setPiece();
 
             fillEmptyMacroBoard();
@@ -291,8 +294,55 @@ public class GameBoardController implements Initializable
         {
             System.out.println("Fail");
         }
-
+        checkAllWin();
+          
     }
+    
+    
+// CANT MAKE FRAME WORK
+//    int winner(int player, int pos)
+//    {
+//        int v = 0, h = 0, d0 = 0, d1 = 0;
+//        int col = pos % 3;
+//        int row = pos / 3;
+//        for (int i = 0; i < 3; i++)
+//        {
+//            if (frame[i][col] == player)
+//            {
+//                v++;// vertical
+//            }
+//            if (frame[row][i] == player)
+//            {
+//                h++;// horizontal
+//            }
+//        }
+//        if (pos % 4 == 0)
+//        {
+//            for (int i = 0; i < 3; i++)
+//            {
+//                if (frame[i][i] == player)
+//                {
+//                    d0++;// backward slash like slant
+//                }
+//            }
+//        }
+//        if ((pos + 2) % 4 == 0)
+//        {
+//            for (int i = 0; i < 3; i++)
+//            {
+//                if (frame[2 - i][i] == player)
+//                {
+//                    d1++;// forward slant
+//                }
+//            }
+//        }
+//
+//        if (v == 3 || h == 3 || d0 == 3 || d1 == 3)
+//        {
+//            return player;
+//        }
+//        return -1;
+//    }
 
     private void activeMicroBoard()
     {
@@ -322,7 +372,7 @@ public class GameBoardController implements Initializable
                 {
                     microBoardY = microBoardY + 6;
                 }
-                    
+
                 //Checks if the location in the macroBoard is == -1, if so set the coresponding 3x3 in the board to available.
                 if (macroBoard[i][j] == IField.AVAILABLE_FIELD)
                 {
@@ -350,6 +400,89 @@ public class GameBoardController implements Initializable
                 }
             }
         }
+      
+    }
+
+    private void checkForWin(Button a, Button b, Button c)
+    {
+        if (a.getText().equals("O"))
+        {
+            if (b.getText().equals("O"))
+            {
+                if (c.getText().equals("O"))
+                {
+                    //playerWin = true;
+                    System.out.println("Player O won");
+                }
+            }
+        }
+        else if (a.getText().equals("X"))
+        {
+            if (b.getText().equals("X"))
+            {
+                if (c.getText().equals("X"))
+                {
+                    //playerWin = true;
+                    System.out.println("Player X won");
+                }
+            }
+        }
+    }
+    
+        
+    private void checkAllWin()
+    {
+          //1
+        
+          //loop +0_3, +0_6, +3_0, +6_0, +3_3 +3_6 +6_3 +6_6
+        
+          //vertical 
+          checkForWin(btn0_0, btn0_1, btn0_2);
+          checkForWin(btn1_0, btn1_1, btn1_2);
+          checkForWin(btn2_0, btn2_1, btn2_2);
+          
+          
+          
+          
+          //horisontal 
+          checkForWin(btn0_0, btn1_0, btn2_0);
+          checkForWin(btn0_1, btn1_1, btn1_2);
+          checkForWin(btn0_2, btn1_2, btn2_2);
+          
+          //diagonal 
+          checkForWin(btn0_0, btn1_1, btn2_2);
+          checkForWin(btn2_0, btn1_1, btn0_2);
+          
+          
+          //not sure if correctly typed...
+          //supposed to be the other vertical win checks
+          checkForWin(btn3_0, btn0_1, btn0_2);
+          checkForWin(btn4_0, btn1_1, btn1_2);
+          checkForWin(btn5_0, btn2_1, btn2_2);
+          checkForWin(btn6_0, btn0_1, btn0_2);
+          checkForWin(btn7_0, btn1_1, btn1_2);
+          checkForWin(btn8_0, btn2_1, btn2_2);
+          
+          checkForWin(btn0_0, btn0_1, btn0_2);
+          checkForWin(btn1_0, btn1_1, btn1_2);
+          checkForWin(btn2_0, btn2_1, btn2_2);
+          checkForWin(btn3_0, btn3_1, btn3_2);
+          checkForWin(btn4_0, btn4_1, btn4_2);
+          checkForWin(btn5_0, btn5_1, btn5_2);
+          checkForWin(btn6_0, btn6_1, btn6_2);
+          checkForWin(btn7_0, btn7_1, btn7_2);
+          checkForWin(btn8_0, btn8_1, btn8_2);
+          
+          checkForWin(btn0_0, btn0_1, btn0_2);
+          checkForWin(btn1_0, btn1_1, btn1_2);
+          checkForWin(btn2_0, btn2_1, btn2_2);
+          checkForWin(btn3_0, btn3_1, btn0_2);
+          checkForWin(btn4_0, btn4_1, btn1_2);
+          checkForWin(btn5_0, btn5_1, btn2_2);
+          checkForWin(btn6_0, btn6_1, btn0_2);
+          checkForWin(btn7_0, btn7_1, btn1_2);
+          checkForWin(btn8_0, btn8_1, btn2_2);
+
     }
 
     private void printBoard()
