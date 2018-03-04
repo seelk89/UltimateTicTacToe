@@ -311,32 +311,32 @@ public class GameBoardController implements Initializable
         {
             for (int j = 0; j < macroBoard.length; j++)
             {
+                int microBoardX = 0;
+                int microBoardY = 0;
+
+                if (i == 1)
+                {
+                    microBoardX = microBoardX + 3;
+                }
+
+                if (i == 2)
+                {
+                    microBoardX = microBoardX + 6;
+                }
+
+                if (j == 1)
+                {
+                    microBoardY = microBoardY + 3;
+                }
+
+                if (j == 2)
+                {
+                    microBoardY = microBoardY + 6;
+                }
+                    
                 //Checks if the location in the macroBoard is == -1, if so set the coresponding 3x3 in the board to available.
                 if (macroBoard[i][j] == IField.AVAILABLE_FIELD)
                 {
-                    int microBoardX = 0;
-                    int microBoardY = 0;
-
-                    if (i == 1)
-                    {
-                        microBoardX = microBoardX + 3;
-                    }
-
-                    if (i == 2)
-                    {
-                        microBoardX = microBoardX + 6;
-                    }
-
-                    if (j == 1)
-                    {
-                        microBoardY = microBoardY + 3;
-                    }
-
-                    if (j == 2)
-                    {
-                        microBoardY = microBoardY + 6;
-                    }
-
                     //Setting is done here
                     for (int k = 0; k < 3; k++)
                     {
@@ -350,29 +350,6 @@ public class GameBoardController implements Initializable
                 //Checks if the location in the macroBoard is == ., if so set the coresponding 3x3 in the board to empty.
                 if (macroBoard[i][j] == IField.EMPTY_FIELD)
                 {
-                    int microBoardX = 0;
-                    int microBoardY = 0;
-
-                    if (i == 1)
-                    {
-                        microBoardX = microBoardX + 3;
-                    }
-
-                    if (i == 2)
-                    {
-                        microBoardX = microBoardX + 6;
-                    }
-
-                    if (j == 1)
-                    {
-                        microBoardY = microBoardY + 3;
-                    }
-
-                    if (j == 2)
-                    {
-                        microBoardY = microBoardY + 6;
-                    }
-
                     //Setting is done here
                     for (int k = 0; k < 3; k++)
                     {
