@@ -228,8 +228,6 @@ public class GameBoardController implements Initializable
         activeMicroBoard();
         //printBoard();
 
-
-
     }
 
     public void setParentWindowController(MainWindowController parent)
@@ -277,7 +275,6 @@ public class GameBoardController implements Initializable
         //System.out.println(c);
         //System.out.println(btn);
 //       System.out.println(board[r][c]);
-
         System.out.println(macroBoard[mrx][mcy]);
 
         if (board[r][c] == "-1")
@@ -295,10 +292,9 @@ public class GameBoardController implements Initializable
             System.out.println("Fail");
         }
         checkAllWin();
-          
+        paintingMicroBoardBackground();
     }
-    
-    
+
 // CANT MAKE FRAME WORK
 //    int winner(int player, int pos)
 //    {
@@ -343,6 +339,126 @@ public class GameBoardController implements Initializable
 //        }
 //        return -1;
 //    }
+    private void setBackgroundToGray(){
+        for (Button i : allTheButtons)
+        {
+            i.setStyle("-fx-background-color: #E5E5E5");
+        }
+}
+    private void paintingMicroBoardBackground()
+    {
+        setBackgroundToGray();
+        // MicroBoard A
+        if (board[0][0] == "-1")
+        {
+            btn0_0.setStyle("-fx-background-color: #FDFF8F");
+            btn0_1.setStyle("-fx-background-color: #FDFF8F");
+            btn0_2.setStyle("-fx-background-color: #FDFF8F");
+            btn1_0.setStyle("-fx-background-color: #FDFF8F");
+            btn1_1.setStyle("-fx-background-color: #FDFF8F");
+            btn1_2.setStyle("-fx-background-color: #FDFF8F");
+            btn2_0.setStyle("-fx-background-color: #FDFF8F");
+            btn2_1.setStyle("-fx-background-color: #FDFF8F");
+            btn2_2.setStyle("-fx-background-color: #FDFF8F");
+        } // MicroBoard B
+        else if (board[0][3] == "-1")
+        {
+            btn3_0.setStyle("-fx-background-color: #FDFF8F");
+            btn3_1.setStyle("-fx-background-color: #FDFF8F");
+            btn3_2.setStyle("-fx-background-color: #FDFF8F");
+            btn4_0.setStyle("-fx-background-color: #FDFF8F");
+            btn4_1.setStyle("-fx-background-color: #FDFF8F");
+            btn4_2.setStyle("-fx-background-color: #FDFF8F");
+            btn5_0.setStyle("-fx-background-color: #FDFF8F");
+            btn5_1.setStyle("-fx-background-color: #FDFF8F");
+            btn5_2.setStyle("-fx-background-color: #FDFF8F");
+        } //MicroBoard C 
+        else if (board[0][6] == "-1")
+        {
+            btn6_0.setStyle("-fx-background-color: #FDFF8F");
+            btn6_1.setStyle("-fx-background-color: #FDFF8F");
+            btn6_2.setStyle("-fx-background-color: #FDFF8F");
+            btn7_0.setStyle("-fx-background-color: #FDFF8F");
+            btn7_1.setStyle("-fx-background-color: #FDFF8F");
+            btn7_2.setStyle("-fx-background-color: #FDFF8F");
+            btn8_0.setStyle("-fx-background-color: #FDFF8F");
+            btn8_1.setStyle("-fx-background-color: #FDFF8F");
+            btn8_2.setStyle("-fx-background-color: #FDFF8F");
+        } //MicroBoard D
+        else if (board[3][0] == "-1")
+        {
+            btn0_3.setStyle("-fx-background-color: #FDFF8F");
+            btn0_4.setStyle("-fx-background-color: #FDFF8F");
+            btn0_5.setStyle("-fx-background-color: #FDFF8F");
+            btn1_3.setStyle("-fx-background-color: #FDFF8F");
+            btn1_4.setStyle("-fx-background-color: #FDFF8F");
+            btn1_5.setStyle("-fx-background-color: #FDFF8F");
+            btn2_3.setStyle("-fx-background-color: #FDFF8F");
+            btn2_4.setStyle("-fx-background-color: #FDFF8F");
+            btn2_5.setStyle("-fx-background-color: #FDFF8F");
+        } //MicroBoard E
+        else if (board[3][3] == "-1")
+        {
+            btn3_3.setStyle("-fx-background-color: #FDFF8F");
+            btn3_4.setStyle("-fx-background-color: #FDFF8F");
+            btn3_5.setStyle("-fx-background-color: #FDFF8F");
+            btn4_3.setStyle("-fx-background-color: #FDFF8F");
+            btn4_4.setStyle("-fx-background-color: #FDFF8F");
+            btn4_5.setStyle("-fx-background-color: #FDFF8F");
+            btn5_3.setStyle("-fx-background-color: #FDFF8F");
+            btn5_4.setStyle("-fx-background-color: #FDFF8F");
+            btn5_5.setStyle("-fx-background-color: #FDFF8F");
+        }//MicroBoard F
+        else if (board[3][6] == "-1")
+        {
+            btn6_3.setStyle("-fx-background-color: #FDFF8F");
+            btn6_4.setStyle("-fx-background-color: #FDFF8F");
+            btn6_5.setStyle("-fx-background-color: #FDFF8F");
+            btn7_3.setStyle("-fx-background-color: #FDFF8F");
+            btn7_4.setStyle("-fx-background-color: #FDFF8F");
+            btn7_5.setStyle("-fx-background-color: #FDFF8F");
+            btn8_3.setStyle("-fx-background-color: #FDFF8F");
+            btn8_4.setStyle("-fx-background-color: #FDFF8F");
+            btn8_5.setStyle("-fx-background-color: #FDFF8F");
+        }//MicroBoard G
+        else if (board[6][0] == "-1")
+        {
+            btn0_6.setStyle("-fx-background-color: #FDFF8F");
+            btn0_7.setStyle("-fx-background-color: #FDFF8F");
+            btn0_8.setStyle("-fx-background-color: #FDFF8F");
+            btn1_6.setStyle("-fx-background-color: #FDFF8F");
+            btn1_7.setStyle("-fx-background-color: #FDFF8F");
+            btn1_8.setStyle("-fx-background-color: #FDFF8F");
+            btn2_6.setStyle("-fx-background-color: #FDFF8F");
+            btn2_7.setStyle("-fx-background-color: #FDFF8F");
+            btn2_8.setStyle("-fx-background-color: #FDFF8F");
+        } //MicroBoard H
+        else if (board[6][3] == "-1")
+        {
+            btn3_6.setStyle("-fx-background-color: #FDFF8F");
+            btn3_7.setStyle("-fx-background-color: #FDFF8F");
+            btn3_8.setStyle("-fx-background-color: #FDFF8F");
+            btn4_6.setStyle("-fx-background-color: #FDFF8F");
+            btn4_7.setStyle("-fx-background-color: #FDFF8F");
+            btn4_8.setStyle("-fx-background-color: #FDFF8F");
+            btn5_6.setStyle("-fx-background-color: #FDFF8F");
+            btn5_7.setStyle("-fx-background-color: #FDFF8F");
+            btn5_8.setStyle("-fx-background-color: #FDFF8F");
+        }//MicroBoard I 
+        else if (board[6][6] == "-1")
+        {
+            btn6_6.setStyle("-fx-background-color: #FDFF8F");
+            btn6_7.setStyle("-fx-background-color: #FDFF8F");
+            btn6_8.setStyle("-fx-background-color: #FDFF8F");
+            btn7_6.setStyle("-fx-background-color: #FDFF8F");
+            btn7_7.setStyle("-fx-background-color: #FDFF8F");
+            btn7_8.setStyle("-fx-background-color: #FDFF8F");
+            btn8_6.setStyle("-fx-background-color: #FDFF8F");
+            btn8_7.setStyle("-fx-background-color: #FDFF8F");
+            btn8_8.setStyle("-fx-background-color: #FDFF8F");
+        }
+
+    }
 
     private void activeMicroBoard()
     {
@@ -400,7 +516,7 @@ public class GameBoardController implements Initializable
                 }
             }
         }
-      
+
     }
 
     private void checkForWin(Button a, Button b, Button c)
@@ -415,8 +531,7 @@ public class GameBoardController implements Initializable
                     System.out.println("Player O won");
                 }
             }
-        }
-        else if (a.getText().equals("X"))
+        } else if (a.getText().equals("X"))
         {
             if (b.getText().equals("X"))
             {
@@ -428,60 +543,54 @@ public class GameBoardController implements Initializable
             }
         }
     }
-    
-        
+
     private void checkAllWin()
     {
-          //1
-        
-          //loop +0_3, +0_6, +3_0, +6_0, +3_3 +3_6 +6_3 +6_6
-        
-          //vertical 
-          checkForWin(btn0_0, btn0_1, btn0_2);
-          checkForWin(btn1_0, btn1_1, btn1_2);
-          checkForWin(btn2_0, btn2_1, btn2_2);
-          
-          
-          
-          
-          //horisontal 
-          checkForWin(btn0_0, btn1_0, btn2_0);
-          checkForWin(btn0_1, btn1_1, btn1_2);
-          checkForWin(btn0_2, btn1_2, btn2_2);
-          
-          //diagonal 
-          checkForWin(btn0_0, btn1_1, btn2_2);
-          checkForWin(btn2_0, btn1_1, btn0_2);
-          
-          
-          //not sure if correctly typed...
-          //supposed to be the other vertical win checks
-          checkForWin(btn3_0, btn0_1, btn0_2);
-          checkForWin(btn4_0, btn1_1, btn1_2);
-          checkForWin(btn5_0, btn2_1, btn2_2);
-          checkForWin(btn6_0, btn0_1, btn0_2);
-          checkForWin(btn7_0, btn1_1, btn1_2);
-          checkForWin(btn8_0, btn2_1, btn2_2);
-          
-          checkForWin(btn0_0, btn0_1, btn0_2);
-          checkForWin(btn1_0, btn1_1, btn1_2);
-          checkForWin(btn2_0, btn2_1, btn2_2);
-          checkForWin(btn3_0, btn3_1, btn3_2);
-          checkForWin(btn4_0, btn4_1, btn4_2);
-          checkForWin(btn5_0, btn5_1, btn5_2);
-          checkForWin(btn6_0, btn6_1, btn6_2);
-          checkForWin(btn7_0, btn7_1, btn7_2);
-          checkForWin(btn8_0, btn8_1, btn8_2);
-          
-          checkForWin(btn0_0, btn0_1, btn0_2);
-          checkForWin(btn1_0, btn1_1, btn1_2);
-          checkForWin(btn2_0, btn2_1, btn2_2);
-          checkForWin(btn3_0, btn3_1, btn0_2);
-          checkForWin(btn4_0, btn4_1, btn1_2);
-          checkForWin(btn5_0, btn5_1, btn2_2);
-          checkForWin(btn6_0, btn6_1, btn0_2);
-          checkForWin(btn7_0, btn7_1, btn1_2);
-          checkForWin(btn8_0, btn8_1, btn2_2);
+        //1
+
+        //loop +0_3, +0_6, +3_0, +6_0, +3_3 +3_6 +6_3 +6_6
+        //vertical 
+        checkForWin(btn0_0, btn0_1, btn0_2);
+        checkForWin(btn1_0, btn1_1, btn1_2);
+        checkForWin(btn2_0, btn2_1, btn2_2);
+
+        //horisontal 
+        checkForWin(btn0_0, btn1_0, btn2_0);
+        checkForWin(btn0_1, btn1_1, btn1_2);
+        checkForWin(btn0_2, btn1_2, btn2_2);
+
+        //diagonal 
+        checkForWin(btn0_0, btn1_1, btn2_2);
+        checkForWin(btn2_0, btn1_1, btn0_2);
+
+        //not sure if correctly typed...
+        //supposed to be the other vertical win checks
+        checkForWin(btn3_0, btn0_1, btn0_2);
+        checkForWin(btn4_0, btn1_1, btn1_2);
+        checkForWin(btn5_0, btn2_1, btn2_2);
+        checkForWin(btn6_0, btn0_1, btn0_2);
+        checkForWin(btn7_0, btn1_1, btn1_2);
+        checkForWin(btn8_0, btn2_1, btn2_2);
+
+        checkForWin(btn0_0, btn0_1, btn0_2);
+        checkForWin(btn1_0, btn1_1, btn1_2);
+        checkForWin(btn2_0, btn2_1, btn2_2);
+        checkForWin(btn3_0, btn3_1, btn3_2);
+        checkForWin(btn4_0, btn4_1, btn4_2);
+        checkForWin(btn5_0, btn5_1, btn5_2);
+        checkForWin(btn6_0, btn6_1, btn6_2);
+        checkForWin(btn7_0, btn7_1, btn7_2);
+        checkForWin(btn8_0, btn8_1, btn8_2);
+
+        checkForWin(btn0_0, btn0_1, btn0_2);
+        checkForWin(btn1_0, btn1_1, btn1_2);
+        checkForWin(btn2_0, btn2_1, btn2_2);
+        checkForWin(btn3_0, btn3_1, btn0_2);
+        checkForWin(btn4_0, btn4_1, btn1_2);
+        checkForWin(btn5_0, btn5_1, btn2_2);
+        checkForWin(btn6_0, btn6_1, btn0_2);
+        checkForWin(btn7_0, btn7_1, btn1_2);
+        checkForWin(btn8_0, btn8_1, btn2_2);
 
     }
 
