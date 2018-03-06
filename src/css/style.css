@@ -8,14 +8,3 @@ and open the template in the editor.
     Author     : Samuel
 */
 
-.root
-{
-    -fx-font-family:'Lucida Console';
-
-}
-.label
-{    
-    -fx-font-weight: bold;
-    -fx-font-size: 20px;
-    
-}
